@@ -134,8 +134,9 @@ class ViewModel: ObservableObject {
         fetchAndUpdateStickies()
     }
     deinit {
-        print("viewmodel deinit")
-        print("I dont know")
+        print("ok man it's good")
+//        print("viewmodel deinit")
+//        print("I dont know")
     }
 }
 
