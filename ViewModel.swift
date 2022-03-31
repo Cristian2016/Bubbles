@@ -25,13 +25,15 @@ class ViewModel: ObservableObject {
         return context
     }()
     
+    private let descriptors = [
+        NSSortDescriptor(key: "bubble", ascending: false),
+        NSSortDescriptor(key: "created", ascending: false)
+    ]
+    
     // MARK: - Methods
     private func fetchAndUpdateStickies() {
+        print(#function)
         let request:NSFetchRequest<Sticky> = Sticky.fetchRequest()
-        let descriptors = [
-            NSSortDescriptor(key: "bubble", ascending: false),
-            NSSortDescriptor(key: "created", ascending: false)
-        ]
         request.sortDescriptors = descriptors
         do {
             let unsortedStickies = try context.fetch(request)
@@ -73,7 +75,11 @@ class ViewModel: ObservableObject {
         return result
     }
     
-    //user intents
+    // MARK: - User Intents
+    //1. create and assign new sticky
+    //2. assign existing sticky
+    //3. delete sticky
+    
     func userTapsCreateNewStickyButton(_ content:String) {
         let newSticky = Sticky(context: context)
         

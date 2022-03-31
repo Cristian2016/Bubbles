@@ -18,8 +18,18 @@ struct StickiesView: View {
     }
     
     // MARK: - Model and Environment
-    @Environment(\.colorScheme) var colorScheme //dark light
+    @Environment(\.colorScheme) var colorScheme //dark/light mode
     @Environment(\.presentationMode) var presentation //use it to dismiss
+    
+//    private static let descriptors = [
+//        NSSortDescriptor(key: "bubble", ascending: false),
+//        NSSortDescriptor(key: "created", ascending: false)
+//    ]
+    
+//    @Environment(\.managedObjectContext) var viewContext
+//    @FetchRequest(entity: Sticky.entity(), sortDescriptors: descriptors, predicate: nil, animation: nil) var stickies:FetchedResults<Sticky> {didSet{
+//        print("stickies set")
+//    }}
     
     @ObservedObject var viewModel:ViewModel
     
@@ -48,7 +58,6 @@ struct StickiesView: View {
     private var isButtonDisabled:Bool { isIdenticalSticky || isOverMaxCount }
 }
 
-//change
 // MARK: - Views
 extension StickiesView {
     var body: some View {
