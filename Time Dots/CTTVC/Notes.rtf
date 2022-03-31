@@ -1,0 +1,55 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red25\green25\blue25;\red127\green127\blue127;
+\red171\green100\blue255;\red171\green100\blue255;\red108\green121\blue135;}
+{\*\expandedcolortbl;;\csgenericrgb\c100000\c100000\c100000;\csgenericrgb\c9804\c9804\c9804;\csgenericrgb\c49804\c49804\c49804;
+\csgenericrgb\c66997\c39255\c100000;\csgenericrgb\c67059\c39216\c100000;\csgenericrgb\c42225\c47379\c52762;}
+\paperw12240\paperh15840\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\deftab692
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 \
+only touchUI, do not touchmodel!\
+ \
+controller didChange anObject: 
+\fs26 \cf4 Any
+\fs28 \cf2 , at indexPath:, newIndexPath \{\
+       \
+        
+\fs26 \cf4 case
+\fs28 \cf2  .\cf5 delete\cf2 :\
+			/* i should avoid reloading data? but how */\
+                \cf5 tableView\cf2 .\cf6 deleteRows\cf2                 \
+                \cf5 tableView\cf2 .\cf6 reloadRows\cf2 (at: bucket, with: .\cf5 none\cf2 ) \
+            \
+        
+\fs26 \cf4 case
+\fs28 \cf2  .\cf5 update\cf2 :\
+            \cf7 /* does not get called when object is removed or inserted into data base\cf2 \
+\cf7              called when state changes in an existing object\cf2 \
+\cf7              ex: you start ct so state changes, then update called\cf2 \
+\cf7              */\cf2 \
+                    \
+        
+\fs26 \cf4 case
+\fs28 \cf2  .\cf5 insert\cf2 :\
+			/* i should avoid reloading data? but how */\
+            \cf7 /* when this method called, the object already exists! do not touch in any way the model */\cf2 \
+                
+\fs26 \cf4 self
+\fs28 \cf2 .\cf5 tableView\cf2 .\cf6 insertRows\cf2 (at: [newIndexPath], with: .\cf5 automatic\cf2 )\
+                \cf5 tableView\cf2 .\cf6 reloadData\cf2 ()\
+                            \
+        
+\fs26 \cf4 case
+\fs28 \cf2  .\cf5 move\cf2 :\
+     \
+        
+\fs26 \cf4 default
+\fs28 \cf2 :
+\fs26 \cf4 break
+\fs28 \cf2 \
+        \}\
+    \}\
+\
+dds how to delete https://youtu.be/LVPc8ij7r_Y?t=737}

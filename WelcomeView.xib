@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeView" customModule="Time_Dots" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomImageView" destination="hIE-iH-7Gv" id="Rm5-hL-tvi"/>
+                <outlet property="container" destination="iN0-l3-epB" id="j2f-lT-wjz"/>
+                <outlet property="greenArrow" destination="nS9-Ua-5gG" id="nqt-bd-ZWj"/>
+                <outlet property="infoBanner" destination="t2j-sV-xo1" id="s9M-Dl-915"/>
+                <outlet property="leftEdge" destination="dgB-He-KXa" id="Wq4-3A-hJz"/>
+                <outlet property="topImageView" destination="PFP-G7-3O0" id="vLn-3C-AXR"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Hoh-OM-a8x">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="start" translatesAutoresizingMaskIntoConstraints="NO" id="PFP-G7-3O0">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="272.5"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenArrow" translatesAutoresizingMaskIntoConstraints="NO" id="w9q-uz-vFj">
+                            <rect key="frame" x="0.0" y="272.5" width="414" height="273"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screenshot 2021-05-22 at 13.25.57" translatesAutoresizingMaskIntoConstraints="NO" id="hIE-iH-7Gv">
+                            <rect key="frame" x="0.0" y="545.5" width="414" height="272.5"/>
+                        </imageView>
+                    </subviews>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgB-He-KXa">
+                    <rect key="frame" x="0.0" y="54" width="10" height="798"/>
+                    <color key="backgroundColor" red="0.032285649329999999" green="0.63045728209999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="10" id="Fvl-Jv-Nda"/>
+                    </constraints>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenArrow" translatesAutoresizingMaskIntoConstraints="NO" id="nS9-Ua-5gG">
+                    <rect key="frame" x="0.0" y="316.5" width="272.5" height="273"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="nS9-Ua-5gG" secondAttribute="height" multiplier="1:1" id="OEC-V0-Jmq"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info inverted" translatesAutoresizingMaskIntoConstraints="NO" id="t2j-sV-xo1">
+                    <rect key="frame" x="0.0" y="-658.5" width="414" height="2213"/>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="t2j-sV-xo1" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="6ZE-QT-Y0K"/>
+                <constraint firstItem="t2j-sV-xo1" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="9K4-Qo-Pdl"/>
+                <constraint firstItem="dgB-He-KXa" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="9nD-ap-yg6"/>
+                <constraint firstItem="nS9-Ua-5gG" firstAttribute="centerY" secondItem="w9q-uz-vFj" secondAttribute="centerY" id="CZb-5O-aFI"/>
+                <constraint firstItem="t2j-sV-xo1" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="TRj-Wg-29H"/>
+                <constraint firstItem="dgB-He-KXa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="gIA-Nc-gZc"/>
+                <constraint firstItem="Hoh-OM-a8x" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="jA6-3I-A26"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="dgB-He-KXa" secondAttribute="bottom" constant="10" id="lLE-ht-ee9"/>
+                <constraint firstItem="Hoh-OM-a8x" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="lMV-OD-WXs"/>
+                <constraint firstItem="nS9-Ua-5gG" firstAttribute="leading" secondItem="dgB-He-KXa" secondAttribute="leading" id="rYW-3J-cTh"/>
+                <constraint firstAttribute="trailing" secondItem="Hoh-OM-a8x" secondAttribute="trailing" id="wxK-xv-SmH"/>
+                <constraint firstItem="Hoh-OM-a8x" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="yLp-yk-n57"/>
+                <constraint firstItem="nS9-Ua-5gG" firstAttribute="height" secondItem="w9q-uz-vFj" secondAttribute="height" id="zas-gh-6gT"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="88" y="142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Screenshot 2021-05-22 at 13.25.57" width="3527" height="1924"/>
+        <image name="greenArrow" width="1902" height="1901"/>
+        <image name="info inverted" width="1886" height="2213"/>
+        <image name="start" width="2919" height="1594"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

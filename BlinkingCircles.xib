@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BlinkingCircles" customModule="Time_Dots" customModuleProvider="target">
+            <connections>
+                <outlet property="circle0" destination="9Qg-QS-jY8" id="sSs-zZ-wpl"/>
+                <outlet property="circle1" destination="FFG-Ig-Jkd" id="ceW-pZ-PAo"/>
+                <outlet property="circle2" destination="UaA-N9-0XS" id="me4-rE-c13"/>
+                <outlet property="container" destination="iN0-l3-epB" id="WZ3-ck-V72"/>
+                <outlet property="stack" destination="bow-Yl-FD0" id="mUz-lH-hbo"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="547" height="196"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bow-Yl-FD0">
+                    <rect key="frame" x="1" y="10" width="545" height="176"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Qg-QS-jY8" customClass="BlinkingCircle" customModule="Time_Dots" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="176.5" height="176"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="9Qg-QS-jY8" secondAttribute="height" multiplier="1:1" id="BFQ-2r-Ngn"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FFG-Ig-Jkd" customClass="BlinkingCircle" customModule="Time_Dots" customModuleProvider="target">
+                            <rect key="frame" x="184.5" y="0.0" width="176" height="176"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="FFG-Ig-Jkd" secondAttribute="height" multiplier="1:1" id="F0Q-n2-fDA"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UaA-N9-0XS" customClass="BlinkingCircle" customModule="Time_Dots" customModuleProvider="target">
+                            <rect key="frame" x="368.5" y="0.0" width="176.5" height="176"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="UaA-N9-0XS" secondAttribute="height" multiplier="1:1" id="U0z-Xz-Tb4"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <constraints>
+                <constraint firstItem="FFG-Ig-Jkd" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.9" id="28E-WZ-vOo"/>
+                <constraint firstItem="9Qg-QS-jY8" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.9" id="N2F-Qm-U9I"/>
+                <constraint firstItem="UaA-N9-0XS" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.9" id="Wc1-zB-7vk"/>
+                <constraint firstItem="bow-Yl-FD0" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="mxp-it-Tqa"/>
+                <constraint firstItem="bow-Yl-FD0" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="nee-Vk-S9G"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="394.92753623188406" y="-78.348214285714278"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20083" systemVersion="21E230" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CT" representedClassName=".CT" syncable="YES">
+        <attribute name="calendarStickerState" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="color" optional="YES" attributeType="String" defaultValueString="red"/>
+        <attribute name="created" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="currentClock" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="durationVisible" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+        <attribute name="hasSquareWidget" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="isCalendarEnabled" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="offlineAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="rank" optional="YES" attributeType="Integer 32" usesScalarValueType="YES"/>
+        <attribute name="referenceClock" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="running" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="stateCD" optional="YES" attributeType="String" defaultValueString="brandNew"/>
+        <attribute name="stickyNote" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="stickyNoteVisible" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <relationship name="sessions" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Session" inverseName="ct" inverseEntity="Session"/>
+        <relationship name="stickies" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Sticky" inverseName="bubble" inverseEntity="Sticky"/>
+        <relationship name="timerDurations" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="TimerDuration" inverseName="timer" inverseEntity="TimerDuration"/>
+    </entity>
+    <entity name="Pair" representedClassName=".Pair" syncable="YES">
+        <attribute name="duration" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="isStickyVisible" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="start" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="sticky" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="stop" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="session" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Session" inverseName="pairs" inverseEntity="Session"/>
+    </entity>
+    <entity name="Session" representedClassName=".Session" syncable="YES">
+        <attribute name="created" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="eventID" optional="YES" attributeType="String"/>
+        <attribute name="isEnded" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <relationship name="ct" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CT" inverseName="sessions" inverseEntity="CT"/>
+        <relationship name="pairs" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Pair" inverseName="session" inverseEntity="Pair"/>
+    </entity>
+    <entity name="Sticky" representedClassName="Sticky" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String"/>
+        <attribute name="created" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="bubble" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CT" inverseName="stickies" inverseEntity="CT"/>
+    </entity>
+    <entity name="TimerDuration" representedClassName=".TimerDuration" syncable="YES">
+        <attribute name="color" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="duration" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" defaultValueString=""/>
+        <relationship name="timer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CT" inverseName="timerDurations" inverseEntity="CT"/>
+    </entity>
+    <elements>
+        <element name="CT" positionX="56.83355712890619" positionY="94.27412414550781" width="128" height="313"/>
+        <element name="Pair" positionX="680.8224487304688" positionY="466.8143310546875" width="128" height="133"/>
+        <element name="Session" positionX="363.7894287109375" positionY="429.0184936523438" width="128" height="104"/>
+        <element name="Sticky" positionX="118.8753662109375" positionY="708.17822265625" width="128" height="88"/>
+        <element name="TimerDuration" positionX="-45.43316650390625" positionY="897.259521484375" width="128" height="104"/>
+    </elements>
+</model>

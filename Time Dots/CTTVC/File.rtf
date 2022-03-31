@@ -1,0 +1,174 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 AppleColorEmoji;}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red25\green25\blue25;\red127\green127\blue127;
+\red255\green255\blue10;\red251\green2\blue7;\red108\green121\blue135;\red208\green168\blue255;\red171\green100\blue255;
+\red171\green100\blue255;\red255\green231\blue109;\red253\green128\blue8;\red86\green208\blue179;\red208\green168\blue255;
+\red86\green208\blue179;}
+{\*\expandedcolortbl;;\csgenericrgb\c100000\c100000\c100000;\csgenericrgb\c9804\c9804\c9804;\csgenericrgb\c49804\c49804\c49804;
+\csgenericrgb\c100000\c99994\c4103;\csgenericrgb\c98625\c712\c2743;\csgenericrgb\c42225\c47379\c52762;\csgenericrgb\c81569\c65882\c100000;\csgenericrgb\c66997\c39255\c100000;
+\csgenericrgb\c67059\c39216\c100000;\csgenericrgb\c100000\c90556\c42780;\csgenericrgb\c99045\c50223\c3289;\csgenericrgb\c33577\c81593\c70189;\csgenericrgb\c81466\c65692\c100000;
+\csgenericrgb\c33726\c81569\c70196;}
+\paperw12240\paperh15840\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\deftab692
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf2 \cb3  
+\fs26 \cf4 func
+\fs28 \cf2  \cf5 controller\cf2 (
+\fs26 \cf4 _
+\fs28 \cf2  controller: \cf6 _FRC\cf2 , didChangeContentWith \cf7 /* new */\cf2 snapshot: \cf6 SnapShotReference\cf2 ) \{\
+        \cf7 /* called when I delete or insert an item\cf2 \
+\cf7          also called when I move items??\cf2 \
+\cf7          */\cf2 \
+        \
+        \cf8 DispatchQueue\cf2 .\cf9 main\cf2 .\cf10 asyncAfter\cf2 (deadline: .\cf10 now\cf2 () + \cf11 2\cf2 ) \{\
+            \cf10 print\cf2 (\cf12 "1 ct count \cf2 \\(
+\fs26 \cf4 self
+\fs28 \cf2 .\cf13 frc\cf2 .\cf9 fetchedObjects\cf2 ?.\cf9 count\cf2  ?? \cf11 -404\cf2 )\cf12 "\cf2 )\
+        \}\
+        \
+        
+\fs26 \cf4 guard
+\fs28 \cf2  
+\fs26 \cf4 let
+\fs28 \cf2  dataSource = \cf9 tableView\cf2 .\cf9 dataSource\cf2  
+\fs26 \cf4 as
+\fs28 \cf2 ? \cf6 DDS\cf2 \
+        
+\fs26 \cf4 else
+\fs28 \cf2  \{\
+            \cf10 assertionFailure\cf2 (\cf12 "controller didChangeContent snapshot: something wrong!"\cf2 )\
+            
+\fs26 \cf4 return
+\fs28 \cf2 \
+        \}\
+        \
+        
+\fs26 \cf4 let
+\fs28 \cf2  oldSnapshot = dataSource.\cf10 snapshot\cf2 () 
+\fs26 \cf4 as
+\fs28 \cf2  \cf14 NSDiffableDataSourceSnapshot\cf2 <\cf6 Section\cf2 , \cf8 NSManagedObjectID\cf2 >\
+        
+\fs26 \cf4 var
+\fs28 \cf2  newSnapshot = snapshot 
+\fs26 \cf4 as
+\fs28 \cf2  \cf14 NSDiffableDataSourceSnapshot\cf2 <\cf6 Section\cf2 , \cf8 NSManagedObjectID\cf2 >\
+        \
+        (controller 
+\fs26 \cf4 as
+\fs28 \cf2 ? \cf6 FRC\cf2 )?.\cf9 fetchedObjects\cf2 ?.\cf10 forEach\cf2 (\{ ct 
+\fs26 \cf4 in
+\fs28 \cf2 \
+            \cf10 print\cf2 (ct.\cf13 state\cf2 )\
+            
+\fs26 \cf4 if
+\fs28 \cf2  ct.\cf13 isTimer\cf2 , ct.\cf13 state\cf2  == .\cf13 running\cf2  \{\
+                \
+                \cf7 /* 
+\f1 \uc0\u9888 \u65039 
+\f0  very slight delay to let dataSource apply snapshot and then start marble rotation */\cf2 \
+                \cf8 DispatchQueue\cf2 .\cf9 main\cf2 .\cf10 asyncAfter\cf2 (deadline: .\cf10 now\cf2 () + \cf11 0.00001\cf2 ) \{\
+                    
+\fs26 \cf4 self
+\fs28 \cf2 .\cf15 syncMarble\cf2 (.\cf13 userStart\cf2 , for: ct)\
+                \}\
+            \}\
+        \})\
+        \
+        
+\fs26 \cf4 var
+\fs28 \cf2  shouldIAnimate = 
+\fs26 \cf4 true
+\fs28 \cf2 \
+        
+\fs26 \cf4 let
+\fs28 \cf2  operation = \cf15 operationKind\cf2 (oldSnapshot.\cf9 numberOfItems\cf2 , newSnapshot.\cf9 numberOfItems\cf2 )\
+        
+\fs26 \cf4 switch
+\fs28 \cf2  operation \{\
+        
+\fs26 \cf4 case
+\fs28 \cf2  .\cf13 delete\cf2 :\
+            \cf10 print\cf2 (\cf12 "1 operation delete"\cf2 , oldSnapshot.\cf9 numberOfItems\cf2 , newSnapshot.\cf9 numberOfItems\cf2 )\
+            shouldIAnimate = 
+\fs26 \cf4 true
+\fs28 \cf2 \
+        
+\fs26 \cf4 case
+\fs28 \cf2  .\cf13 insert\cf2 :\
+            \cf10 print\cf2 (\cf12 "1 operation insert"\cf2 , oldSnapshot.\cf9 numberOfItems\cf2 , newSnapshot.\cf9 numberOfItems\cf2 )\
+            shouldIAnimate = 
+\fs26 \cf4 false
+\fs28 \cf2 \
+        
+\fs26 \cf4 case
+\fs28 \cf2  .\cf13 move\cf2 :\
+            \cf10 print\cf2 (\cf12 "1 operation move"\cf2 )\
+        
+\fs26 \cf4 default
+\fs28 \cf2 :\
+            \cf10 print\cf2 (\cf12 "1 operation freedom"\cf2 )\
+        \}\
+        \
+        \cf7 /* keep only different identifiers for objects that have been saved by context already */\cf2 \
+        
+\fs26 \cf4 let
+\fs28 \cf2  identifiers:[\cf8 NSManagedObjectID\cf2 ] = newSnapshot.\cf9 itemIdentifiers\cf2 .\cf10 compactMap\cf2  \{ identifier 
+\fs26 \cf4 in
+\fs28 \cf2 \
+            \
+            
+\fs26 \cf4 guard
+\fs28 \cf2  \cf7 /* make sure both snapshots have matching indices */\cf2 \
+                
+\fs26 \cf4 let
+\fs28 \cf2  oldIndex = oldSnapshot.\cf10 indexOfItem\cf2 (identifier),\
+                
+\fs26 \cf4 let
+\fs28 \cf2  newIndex = newSnapshot.\cf10 indexOfItem\cf2 (identifier) 
+\fs26 \cf4 else
+\fs28 \cf2  \{
+\fs26 \cf4 return
+\fs28 \cf2  
+\fs26 \cf4 nil
+\fs28 \cf2 \}\
+            
+\fs26 \cf4 if
+\fs28 \cf2  newIndex \cf10 ==\cf2  oldIndex \{
+\fs26 \cf4 return
+\fs28 \cf2  
+\fs26 \cf4 nil
+\fs28 \cf2 \}\
+            \
+            
+\fs26 \cf4 guard
+\fs28 \cf2 \
+                
+\fs26 \cf4 let
+\fs28 \cf2  existingObject = 
+\fs26 \cf4 try
+\fs28 \cf2 ? controller.\cf9 managedObjectContext\cf2 .\cf10 existingObject\cf2 (with: identifier),\
+                \
+                \cf7 /* existingObject was updated and has unsaved changes. changes are saved when context is saved */\cf2 \
+                existingObject.\cf9 isUpdated\cf2  \cf7 /* and has unsaved changes */\cf2 \
+            \
+            
+\fs26 \cf4 else
+\fs28 \cf2  \{
+\fs26 \cf4 return
+\fs28 \cf2  
+\fs26 \cf4 nil
+\fs28 \cf2 \}\
+            \
+            
+\fs26 \cf4 return
+\fs28 \cf2  identifier\
+        \}\
+        \
+        newSnapshot.\cf10 reloadItems\cf2 (identifiers)\
+        \
+        \cf7 //apply changes\cf2 \
+        dataSource.\cf10 apply\cf2 (newSnapshot 
+\fs26 \cf4 as
+\fs28 \cf2  \cf6 Snapshot\cf2 , animatingDifferences: shouldIAnimate)\
+    \}}
