@@ -42,7 +42,7 @@ struct StickiesView: View {
     private let rowHeight = CGFloat(9)
     var dismiss:(()->())? //dismiss VC when user choses a note or touches [+]
     
-    // MARK: - Methods
+    // MARK: - Methods and Properties
     ///displayed results keep updating as userInput changes
     private func filtered() -> [Sticky] {
         return userInput.isEmpty ?
