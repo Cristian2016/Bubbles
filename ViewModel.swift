@@ -37,35 +37,34 @@ class ViewModel: ObservableObject {
         print(#function)
         let request:NSFetchRequest<Sticky> = Sticky.fetchRequest()
         request.sortDescriptors = descriptors
-        do {
-            let unsortedStickies = try context.fetch(request)
-            DispatchQueue.global().async { [self] in
-                //own bubble and other bubbles
-                let sortedStickies = self.sort(unsortedStickies)
-                DispatchQueue.main.async { self.stickies = sortedStickies }
-            }
+        
+        let unsortedStickies = try? context.fetch(request)
+        DispatchQueue.global().async { [self] in
+            //own bubble and other bubbles
+            let sortedStickies = self.sort(unsortedStickies ?? [])
+            DispatchQueue.main.async { self.stickies = sortedStickies }
         }
-        catch let error { print(error.localizedDescription) }
     }
     
+    // MARK: - ⚠️ important method
     ///it splits stickies into 2 subarrays: own and others
     private func sort(_ unsortedStickies:[Sticky]) -> [Sticky] {
-        var ownBucket = [Sticky]()
-        var otherBucket = [Sticky]()
+        var ownStickies = [Sticky]()
+        var otherStickies = [Sticky]()
         
         //sort by own first
         unsortedStickies.forEach {
-            if $0.bubble?.id == pair.session?.ct?.id { ownBucket.append($0) }
-            else { otherBucket.append($0) }
+            if $0.bubble?.id == pair.session?.ct?.id { ownStickies.append($0) }
+            else { otherStickies.append($0) }
         }
-        
+                
         //used to filter out duplicates in the otherBucket
-        let ownBucketContents = ownBucket.compactMap { $0.content }
+        let ownStickiesContents = ownStickies.compactMap { $0.content }
         
-        let duplicateFreeOtherBucket = otherBucket.filter {
-            !ownBucketContents.contains($0.content!)
+        let duplicateFreeOtherStickies = otherStickies.filter {
+            !ownStickiesContents.contains($0.content!)
         }
-        let result = ownBucket + duplicateFreeOtherBucket  /* without own elements */
+        let result = ownStickies + duplicateFreeOtherStickies  /* without own elements */
         
         let contents = result.compactMap { $0.content }
         DispatchQueue.main.async { self.stickyContents = contents }
