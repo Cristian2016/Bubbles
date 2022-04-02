@@ -93,12 +93,14 @@ extension CTTVC {
         //combine images for CalON and CallOFF
         //803 × 738
         let size = CGSize(width: 870, height: 738) //make sure aspect ratio is good
-        let calendar = UIImage(systemName: "calendar")!.withTintColor(UIColor(named: "calendar") ?? .black)
+        let calendar = UIImage(systemName: "calendar")!.withTintColor(.white)
         let checkmark = UIImage(systemName: "checkmark")!
-        let calONImage = calendar.combine(with: checkmark, color: .white, in: size)
+        
+        let checkmarkColor = UIColor(named: "Confirm") ?? .black
+        let calONImage = calendar.combine(with: checkmark, color: checkmarkColor, in: size)
         
         let cancel = UIImage(systemName: "line.diagonal")!
-        let calOFFImage = calendar.combine(with: cancel, of: 1, color: .white, in: size)
+        let calOFFImage = calendar.combine(with: cancel, of: 1, color: .red, in: size)
         
         let image = !calendarEnabled ? calONImage : calOFFImage
         //set image

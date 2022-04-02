@@ -62,6 +62,7 @@ class ViewModel: ObservableObject {
         let duplicateFreeOtherStickies = otherStickies.filter {
             !ownStickiesContents.contains($0.content!)
         }
+        
         let result = ownStickies + duplicateFreeOtherStickies  /* without own elements */
         
         let contents = result.compactMap { $0.content }

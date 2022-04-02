@@ -12,7 +12,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     static var didEnterBackgroundAt:Date?
     static let statusBarManager = UIApplication.shared.windows.first?.windowScene?.statusBarManager
-    
+        
     var window: UIWindow?
     private func cttvc() -> CTTVC? {
         (window?.rootViewController as? NC)?.viewControllers.first as? CTTVC
