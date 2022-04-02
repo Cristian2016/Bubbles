@@ -27,18 +27,16 @@ class ViewModel: ObservableObject {
         return context
     }()
     
-    private let descriptors = [
-        NSSortDescriptor(key: "bubble", ascending: false),
-        NSSortDescriptor(key: "created", ascending: false)
-    ]
-    
     // MARK: - Methods
     private func fetchAndUpdateStickies() {
-        print(#function)
+        //make request
         let request:NSFetchRequest<Sticky> = Sticky.fetchRequest()
-        request.sortDescriptors = descriptors
+        let sortByDate = NSSortDescriptor(key: #keyPath(Sticky.created), ascending: false)
+        request.sortDescriptors = [sortByDate]
         
+        //fetch
         let unsortedStickies = try? context.fetch(request)
+        
         DispatchQueue.global().async { [self] in
             //own bubble and other bubbles
             let sortedStickies = self.sort(unsortedStickies ?? [])
@@ -108,11 +106,10 @@ class ViewModel: ObservableObject {
         //is existing sticky own or other
         let ownSticky = identicalStickies.filter { $0.bubble == bubble }.first
         
-        if let ownSticky = ownSticky {
-            print("user chose own")
-            ownSticky.created = Date()
-        } else {
-            print("user chose other")
+        //if "own sticky", change its date only
+        //if "other sticky", create new "own sticky" sticky with same content
+        if let ownSticky = ownSticky { ownSticky.created = Date() }
+        else {
             let newSticky = Sticky(context: context)
             newSticky.content = content
             newSticky.bubble = bubble
