@@ -9,8 +9,10 @@ import SwiftUI
 import CoreData
 
 class ViewModel: ObservableObject {
-    // MARK: - Publishers
+    // MARK: - Publisher
     @Published var stickies = [Sticky]()
+    
+    // MARK: -
     private var pair:Pair
     var stickyContents = [String]()
     

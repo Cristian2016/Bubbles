@@ -19,11 +19,6 @@
 		1F0AA8AC2684567600732897 /* WidgetDataCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0AA8A92684567600732897 /* WidgetDataCoordinator.swift */; };
 		1F0AA8AD2684567600732897 /* WidgetDataCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0AA8A92684567600732897 /* WidgetDataCoordinator.swift */; };
 		1F145ACF27A3F4420076CCD6 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F145ACE27A3F4420076CCD6 /* Fonts.swift */; };
-		1F167AEA27F59A1C00350CE8 /* StickiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F167AE927F59A1C00350CE8 /* StickiesViewModel.swift */; };
-		1F167AEB27F59A1C00350CE8 /* StickiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F167AE927F59A1C00350CE8 /* StickiesViewModel.swift */; };
-		1F167AEC27F59A1C00350CE8 /* StickiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F167AE927F59A1C00350CE8 /* StickiesViewModel.swift */; };
-		1F167AED27F59A1C00350CE8 /* StickiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F167AE927F59A1C00350CE8 /* StickiesViewModel.swift */; };
-		1F167AEE27F59A1C00350CE8 /* StickiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F167AE927F59A1C00350CE8 /* StickiesViewModel.swift */; };
 		1F19284D2779DE4500E5C29E /* TimerSubtitleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19284B2779DE4500E5C29E /* TimerSubtitleHeader.swift */; };
 		1F19284E2779DE4500E5C29E /* TimerSubtitleHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F19284C2779DE4500E5C29E /* TimerSubtitleHeader.xib */; };
 		1F1D86CF2762728D0072B8C3 /* MoreOptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1D86CE2762728D0072B8C3 /* MoreOptionsVC.swift */; };
@@ -371,7 +366,6 @@
 		1F0821EF27A04C8000417B5F /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		1F0AA8A92684567600732897 /* WidgetDataCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetDataCoordinator.swift; sourceTree = SOURCE_ROOT; };
 		1F145ACE27A3F4420076CCD6 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
-		1F167AE927F59A1C00350CE8 /* StickiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickiesViewModel.swift; sourceTree = SOURCE_ROOT; };
 		1F19284B2779DE4500E5C29E /* TimerSubtitleHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSubtitleHeader.swift; sourceTree = "<group>"; };
 		1F19284C2779DE4500E5C29E /* TimerSubtitleHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerSubtitleHeader.xib; sourceTree = "<group>"; };
 		1F1D86CE2762728D0072B8C3 /* MoreOptionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreOptionsVC.swift; sourceTree = "<group>"; };
@@ -655,7 +649,6 @@
 		1F93720C27EDDEEC00023440 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				1F167AE927F59A1C00350CE8 /* StickiesViewModel.swift */,
 				1F96CDBD27E65CE0001B9963 /* StickiesView.swift */,
 				1F96CDBB27E65BC0001B9963 /* StickiesVC.swift */,
 				1F93720A27EDDEA200023440 /* ViewModel.swift */,
@@ -1354,7 +1347,6 @@
 				1F686E24278F50DF0032279B /* TimerDuration+CoreDataClass.swift in Sources */,
 				1FD2B2C027E6788A00BC6C7C /* Sticky+CoreDataClass.swift in Sources */,
 				1F3E268B278C217900BE5452 /* Model.xcdatamodeld in Sources */,
-				1F167AEE27F59A1C00350CE8 /* StickiesViewModel.swift in Sources */,
 				1F3E269D278C219C00BE5452 /* Session.swift in Sources */,
 				1F3E26A1278C21A800BE5452 /* Pair+CoreDataProperties.swift in Sources */,
 				1F686E33278F50DF0032279B /* CT+CoreDataProperties.swift in Sources */,
@@ -1397,7 +1389,6 @@
 				2874E056261242AF00E1209C /* ColorSidebar.swift in Sources */,
 				282B597B25F412EF0081D048 /* DST.swift in Sources */,
 				28119FE1263A8E9300B82E16 /* Local Notifications.swift in Sources */,
-				1F167AEA27F59A1C00350CE8 /* StickiesViewModel.swift in Sources */,
 				2821B73C25E4E3020096508C /* SceneDelegate.swift in Sources */,
 				1F81B21227A5553B00AC9451 /* DoneView.swift in Sources */,
 				1F657EDF278ACDA40077D229 /* Intents.intentdefinition in Sources */,
@@ -1482,7 +1473,6 @@
 				1FFE2E05268DEB37005B172B /* SwiftUIView.swift in Sources */,
 				2823D50A267DD5440007EFB4 /* Extensions.swift in Sources */,
 				1FD1AA2E26826FEC005FC50C /* CT.swift in Sources */,
-				1F167AED27F59A1C00350CE8 /* StickiesViewModel.swift in Sources */,
 				1F94DE9327847E23000CBBAE /* Model.xcdatamodeld in Sources */,
 				1FD1AA3226827006005FC50C /* DST.swift in Sources */,
 				1F686E32278F50DF0032279B /* CT+CoreDataProperties.swift in Sources */,
@@ -1537,7 +1527,6 @@
 				1F21FD832691F93500432A08 /* FWLegos.swift in Sources */,
 				1FDACAC12682742900357916 /* CT.swift in Sources */,
 				1F63259E268AF8C300ECADEB /* IntentHandler.swift in Sources */,
-				1F167AEC27F59A1C00350CE8 /* StickiesViewModel.swift in Sources */,
 				1FD2B2BE27E6788A00BC6C7C /* Sticky+CoreDataClass.swift in Sources */,
 				1FDACABD2682742200357916 /* Pair.swift in Sources */,
 				1F686E31278F50DF0032279B /* CT+CoreDataProperties.swift in Sources */,
@@ -1554,7 +1543,6 @@
 				28512FA7264D5A70005A2CE5 /* TimeDots1.swift in Sources */,
 				1F0AA8AB2684567600732897 /* WidgetDataCoordinator.swift in Sources */,
 				1FDACAC72682745900357916 /* Globals.swift in Sources */,
-				1F167AEB27F59A1C00350CE8 /* StickiesViewModel.swift in Sources */,
 				1FDACAC02682742600357916 /* Session.swift in Sources */,
 				1F686E30278F50DF0032279B /* CT+CoreDataProperties.swift in Sources */,
 				1FDACABE2682742300357916 /* Pair.swift in Sources */,

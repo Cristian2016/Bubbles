@@ -21,16 +21,6 @@ struct StickiesView: View {
     @Environment(\.colorScheme) var colorScheme //dark/light mode
     @Environment(\.presentationMode) var presentation //use it to dismiss
     
-//    private static let descriptors = [
-//        NSSortDescriptor(key: "bubble", ascending: false),
-//        NSSortDescriptor(key: "created", ascending: false)
-//    ]
-    
-//    @Environment(\.managedObjectContext) var viewContext
-//    @FetchRequest(entity: Sticky.entity(), sortDescriptors: descriptors, predicate: nil, animation: nil) var stickies:FetchedResults<Sticky> {didSet{
-//        print("stickies set")
-//    }}
-    
     @ObservedObject var viewModel:ViewModel
     
     @State var userInput:String = ""
