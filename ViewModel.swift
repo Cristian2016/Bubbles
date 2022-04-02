@@ -60,13 +60,8 @@ class ViewModel: ObservableObject {
         }
         
         //used to filter out duplicates in the otherBucket
-        var ownBucketContents = [String]()
+        let ownBucketContents = ownBucket.compactMap { $0.content }
         
-        ownBucket.forEach {
-            if $0.content != nil {
-                ownBucketContents.append($0.content!)
-            }
-        }
         let duplicateFreeOtherBucket = otherBucket.filter {
             !ownBucketContents.contains($0.content!)
         }
@@ -130,8 +125,9 @@ class ViewModel: ObservableObject {
     }
     
     func userDeletesSticky(at indexSet:IndexSet) {
-        print(indexSet)
-        indexSet.forEach { context.delete(stickies[$0]) }
+        guard let index = indexSet.first else { return }
+        
+        context.delete(stickies[index])
         try? context.save()
         fetchAndUpdateStickies()
     }
@@ -142,9 +138,7 @@ class ViewModel: ObservableObject {
         fetchAndUpdateStickies()
     }
     deinit {
-        print("ok man it's good")
 //        print("viewmodel deinit")
-//        print("I dont know")
     }
 }
 

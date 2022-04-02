@@ -111,6 +111,7 @@ extension StickiesView {
             UITableView.appearance().showsVerticalScrollIndicator = false
         })
         .environment(\.defaultMinListRowHeight, rowHeight)
+        .listRowSeparator(.hidden)
     }
     
     // MARK: - fieldbutton legos
