@@ -108,7 +108,7 @@ extension UIViewController {
         if presentingViewController?.restorationIdentifier != "infoVC" {
             if motion == .motionShake {
                 //                navigationController?.viewControllers = []
-                if presentingViewController?.restorationIdentifier != "DetailVC" {
+                if !["StickiesVC", "DetailVC"].contains(presentingViewController?.restorationIdentifier) {
                     addYellowInfoButtonInTheTopLeftCorner()
                 }
             }
