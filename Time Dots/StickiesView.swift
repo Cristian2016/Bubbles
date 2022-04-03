@@ -10,6 +10,16 @@ import SwiftUI
 import CoreData
 
 struct StickiesView: View {
+    
+    // MARK: - Model and Environment
+    @Environment(\.colorScheme) var colorScheme //dark/light mode
+    @Environment(\.presentationMode) var presentation //use it to dismiss
+    
+    // MARK: -
+    @ObservedObject var viewModel:ViewModel
+    private var stickyText:String
+    var dismiss:(()->())? //dismiss VC when user choses a note or touches [+]
+    
     init(viewModel:ViewModel, stickyText:String, closure: (()->())?) {
         self.viewModel = viewModel
         self.dismiss = closure
@@ -17,20 +27,13 @@ struct StickiesView: View {
         self.userInput = userInput
     }
     
-    // MARK: - Model and Environment
-    @Environment(\.colorScheme) var colorScheme //dark/light mode
-    @Environment(\.presentationMode) var presentation //use it to dismiss
-    
-    @ObservedObject var viewModel:ViewModel
-    
+    // MARK: -
     @State var userInput:String = ""
-    private var stickyText:String
     @FocusState var isFocused:Bool
     
     private var isDark:Bool { colorScheme == .dark }
     private let maxUserInputLength = 12
     private let rowHeight = CGFloat(9)
-    var dismiss:(()->())? //dismiss VC when user choses a note or touches [+]
     
     // MARK: - Methods and Properties
     ///displayed results keep updating as userInput changes
@@ -117,10 +120,12 @@ extension StickiesView {
     // MARK: - fieldbutton legos
     var field:some View {
         TextField("Search / Add Note", text: $userInput)
-            .font(.system(size: 22, weight: .medium))
+            .font(.system(size: 30, weight: .regular))
+            .minimumScaleFactor(0.5)
             .padding([.trailing, .leading])
             .padding([.trailing, .leading])
-            .focused($isFocused, equals: true)
+            .focused($isFocused, equals: true) //isFocused changes and must watch for true
+            .autocapitalization(.words)
             .onChange(of: userInput) {//user types characters
                 if $0.count > maxUserInputLength { userInput.removeLast() }
             }

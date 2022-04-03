@@ -10,9 +10,7 @@ import UIKit
 import CoreData
 import WidgetKit
 
-extension CTTVC {
-    typealias Action = UIContextualAction
-}
+extension CTTVC { typealias Action = UIContextualAction }
 
 // MARK: - right and left swipes
 extension CTTVC {
