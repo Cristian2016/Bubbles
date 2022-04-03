@@ -118,7 +118,9 @@ extension StickiesView {
             .listRowBackground(Color.darkGray)
             
             //prevent app crash when user wants to drag-and-drop text in the textfield
-            if filteredStickies.isEmpty { noMatchFoundAlert }
+            if filteredStickies.isEmpty {
+                noMatchFoundAlert.listRowBackground(Color.darkGray)
+            }
         }
         .padding()
         .listStyle(.plain)
@@ -188,12 +190,14 @@ extension StickiesView {
     
     var noMatchFoundAlert:some View {
         VStack(alignment:.leading, spacing: 4) {
+            Spacer()
             Text("No Match Found")
                 .foregroundColor(.white)
                 .font(.title2)
                 .background(Color.red)
             Text("Tap [+] to Add Note")
-                .font(.caption)
+                .font(.body)
+                .foregroundColor(.white)
         }
     }
     
