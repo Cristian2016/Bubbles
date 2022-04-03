@@ -40,7 +40,7 @@ struct StickiesView: View {
     private func filtered() -> [Sticky] {
         return userInput.isEmpty ?
         viewModel.stickies :
-        viewModel.stickies.filter { $0.content!.lowercased().contains(userInput.lowercased()) }
+        viewModel.stickies.filter { $0.content!.lowercased().folding(options: .diacriticInsensitive, locale: nil).contains(userInput.lowercased().folding(options: .diacriticInsensitive, locale: nil)) }
     }
     
     private var isIdenticalSticky:Bool { viewModel.stickyContents.contains(userInput.capitalized) }
@@ -109,7 +109,7 @@ extension StickiesView {
             .listRowBackground(Color.darkGray)
             
             //prevent app crash when user wants to drag-and-drop text in the textfield
-            if filteredStickies.isEmpty { noMatchFound }
+            if filteredStickies.isEmpty { noMatchFoundAlert }
         }
         .padding()
         .listStyle(.plain)
@@ -177,7 +177,7 @@ extension StickiesView {
         .padding()
     }
     
-    var noMatchFound:some View {
+    var noMatchFoundAlert:some View {
         Text("No Match Found")
             .foregroundColor(.white)
             .font(.title3)
