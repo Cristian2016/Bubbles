@@ -40,7 +40,16 @@ struct StickiesView: View {
     private func filtered() -> [Sticky] {
         return userInput.isEmpty ?
         viewModel.stickies :
-        viewModel.stickies.filter { $0.content!.lowercased().folding(options: .diacriticInsensitive, locale: nil).contains(userInput.lowercased().folding(options: .diacriticInsensitive, locale: nil)) }
+        viewModel.stickies.filter { filterPredicate($0.content, userInput) }
+    }
+    
+    private func filterPredicate(_ stickyContent:String?, _ userInput:String) -> Bool {
+        guard let content = stickyContent else { fatalError() }
+        
+        let input0 = content.lowercased().folding(options: .diacriticInsensitive, locale: nil)
+        let input1 = userInput.lowercased().folding(options: .diacriticInsensitive, locale: nil)
+        
+        return input0.contains(input1)
     }
     
     private var isIdenticalSticky:Bool { viewModel.stickyContents.contains(userInput.capitalized) }
