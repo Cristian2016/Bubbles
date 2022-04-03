@@ -46,10 +46,10 @@ struct StickiesView: View {
     private func filterPredicate(_ stickyContent:String?, _ userInput:String) -> Bool {
         guard let content = stickyContent else { fatalError() }
         
-        let input0 = content.lowercased().folding(options: .diacriticInsensitive, locale: nil)
-        let input1 = userInput.lowercased().folding(options: .diacriticInsensitive, locale: nil)
+        let sticky = content.lowercased().folding(options: .diacriticInsensitive, locale: nil)
+        let userText = userInput.lowercased().folding(options: .diacriticInsensitive, locale: nil)
         
-        return input0.contains(input1)
+        return sticky.contains(userText)
     }
     
     private var isIdenticalSticky:Bool { viewModel.stickyContents.contains(userInput.capitalized) }
@@ -189,7 +189,7 @@ extension StickiesView {
     var noMatchFoundAlert:some View {
         Text("No Match Found")
             .foregroundColor(.white)
-            .font(.title3)
+            .font(.title2)
             .background(Color.red)
     }
     
