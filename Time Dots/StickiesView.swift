@@ -187,10 +187,14 @@ extension StickiesView {
     }
     
     var noMatchFoundAlert:some View {
-        Text("No Match Found")
-            .foregroundColor(.white)
-            .font(.title2)
-            .background(Color.red)
+        VStack(alignment:.leading, spacing: 4) {
+            Text("No Match Found")
+                .foregroundColor(.white)
+                .font(.title2)
+                .background(Color.red)
+            Text("Tap [+] to Add Note")
+                .font(.caption)
+        }
     }
     
     // MARK: - Methods or properties
