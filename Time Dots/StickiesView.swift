@@ -75,7 +75,10 @@ extension StickiesView {
             
             VStack {
                 Spacer().frame(height: 25)
-                field
+                HStack {
+                    field
+                    if userInput.count > 9 { Spacer(minLength: 35) }
+                }
                 Spacer()
             }
             
@@ -137,7 +140,6 @@ extension StickiesView {
         TextField("Search / Add Note", text: $userInput)
             .font(.system(size: 30, weight: .regular))
             .minimumScaleFactor(0.5)
-            .padding([.trailing, .leading])
             .padding([.trailing, .leading])
             .focused($isFocused, equals: true) //isFocused changes and must watch for true
             .autocapitalization(.words)
