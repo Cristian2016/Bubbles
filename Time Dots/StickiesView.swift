@@ -192,7 +192,7 @@ extension StickiesView {
     
     var noMatchFoundAlert:some View {
         VStack(alignment:.center, spacing: 4) {
-            Spacer()
+            Spacer(minLength: 30)
             Text("No Match Found")
                 .foregroundColor(.white)
                 .font(.title3)
