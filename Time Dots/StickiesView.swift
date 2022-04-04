@@ -74,7 +74,7 @@ extension StickiesView {
             .onTapGesture { isFocused = !isFocused } //toggle text field keyboard
             
             VStack {
-                Spacer().frame(height: 25)
+                Spacer().frame(height: 20)
                 HStack {
                     field
                     if userInput.count > 9 { Spacer(minLength: 35) }
