@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20083" systemVersion="21E230" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E230" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BubbleSticky" representedClassName="BubbleSticky" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String"/>
+        <attribute name="created" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
     <entity name="CT" representedClassName=".CT" syncable="YES">
         <attribute name="calendarStickerState" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="color" optional="YES" attributeType="String" defaultValueString="red"/>
@@ -53,5 +57,6 @@
         <element name="Session" positionX="363.7894287109375" positionY="429.0184936523438" width="128" height="104"/>
         <element name="Sticky" positionX="118.8753662109375" positionY="708.17822265625" width="128" height="88"/>
         <element name="TimerDuration" positionX="-45.43316650390625" positionY="897.259521484375" width="128" height="104"/>
+        <element name="BubbleSticky" positionX="162" positionY="252" width="128" height="59"/>
     </elements>
 </model>

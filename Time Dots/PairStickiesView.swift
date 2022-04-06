@@ -16,11 +16,11 @@ struct PairStickiesView: View {
     @Environment(\.presentationMode) var presentation //use it to dismiss
     
     // MARK: -
-    @ObservedObject var viewModel:ViewModel
+    @ObservedObject var viewModel:PairStickyViewModel
     private var stickyText:String
     var dismiss:(()->())? //dismiss VC when user choses a note or touches [+]
     
-    init(viewModel:ViewModel, stickyText:String, closure: (()->())?) {
+    init(viewModel:PairStickyViewModel, stickyText:String, closure: (()->())?) {
         
         self.viewModel = viewModel
         self.dismiss = closure

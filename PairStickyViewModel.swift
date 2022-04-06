@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreData
 
-class ViewModel: ObservableObject {
+class PairStickyViewModel: ObservableObject {
     // MARK: - Publisher
     @Published var stickies = [Sticky]()
     
