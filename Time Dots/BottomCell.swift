@@ -184,7 +184,7 @@ extension BottomCell: UICollectionViewDelegate {
     
     private func showStickiesView(for pair:Pair, and pairCell:PairCell) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let stickiesVC = storyboard.instantiateViewController(withIdentifier: "StickiesVC") as? StickiesVC else { return }
+        guard let stickiesVC = storyboard.instantiateViewController(withIdentifier: "StickiesVC") as? PairStickiesVC else { return }
         guard let detailVC = viewController() as? DetailVC else { return }
         
         NotificationCenter.default.post(name: Post.animatePairCell, object: pairCell)
@@ -198,18 +198,20 @@ extension BottomCell: UICollectionViewDelegate {
 }
 
 extension BottomCell: PairCellDelegate {
-    func userWantsToDeleteSticky(for pairCell:PairCell) {
+    func userDeletesSticky(for pairCell:PairCell) {
         //delete sticky note
         guard
             let indexPath = collectionView.indexPath(for: pairCell),
-            let pair = dataSource.itemIdentifier(for: indexPath)
+            let pair = dataSource.itemIdentifier(for: indexPath),
+            let session = pair.session
         else { fatalError() }
         pair.sticky = ""
         CoreDataStack.shared.saveContext()
+        CalManager.shared.updateExistingEvent(.notes(session))
     }
     
     //save sticky added by user
-    func userAddedSticky(for pairCell:PairCell, sticky: String) {
+    func userAddsSticky(for pairCell:PairCell, sticky: String) {
         guard
             let indexPath = collectionView.indexPath(for: pairCell)
         else { return }
@@ -226,16 +228,16 @@ extension BottomCell: PairCellDelegate {
         if newSticky != oldSticky {//no reason to save to CoreData if stickies are the same
             pair.sticky = newSticky
             CoreDataStack.shared.saveContext()
-            CalendarEventsManager.shared.updateEvent(.notes(pair.session!))
+            CalManager.shared.updateExistingEvent(.notes(pair.session!))
         }
     }
     
-    func userWantsToEditSticky(for pairCell:PairCell) {
+    func userEditsSticky(for pairCell:PairCell) {
         guard
         let indexPath = collectionView.indexPath(for: pairCell),
         let pair = dataSource.itemIdentifier(for: indexPath)
         else { fatalError() }
-        
+                
         showStickiesView(for: pair, and: pairCell)
     }
 }

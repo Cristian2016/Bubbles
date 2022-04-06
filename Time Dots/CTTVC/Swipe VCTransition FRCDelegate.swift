@@ -65,7 +65,7 @@ extension CTTVC {
             else {return}
             
             if UserDefaults.standard.value(forKey: UDKey.calendarAuthorizationRequestedAlready) == nil {
-                CalendarEventsManager.shared.requestAuthorizationAndCreateCalendar()
+                CalManager.shared.requestAuthorizationAndCreateCalendar()
                 UserDefaults.standard.setValue(true, forKey: UDKey.calendarAuthorizationRequestedAlready)
             }
             
@@ -82,7 +82,7 @@ extension CTTVC {
             cell.setupCalendarSticker(for: bubble, animated: true)
             
             //exports only if calendar is enabled
-            CalendarEventsManager.shared.shouldExportToCalendarAllSessions(of: bubble)
+            CalManager.shared.shouldExportToCalendarAllSessions(of: bubble)
         }
         
         moreOptionsAction.image = UIImage(systemName: "ellipsis.circle.fill")?.ofSize(CGSize(width: 800, height: 800), .white)
@@ -241,7 +241,7 @@ extension CTTVC {
         
         if bubble.isCalendarEnabled {
             //remove calendar event
-            CalendarEventsManager.shared.deleteEvent(with:session.eventID)
+            CalManager.shared.deleteEvent(with:session.eventID)
         }
         
         AppDelegate.context.delete(session)

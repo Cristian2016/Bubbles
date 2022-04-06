@@ -74,7 +74,7 @@ class PairCell: UICollectionViewCell {
     var checkSticky = false {didSet{
         canKillKeyboard = true
         //informs the delegate "the user typed a sticky note"
-        delegate?.userAddedSticky(for: self, sticky: stickyLabel.text ?? String.empty)
+        delegate?.userAddsSticky(for: self, sticky: stickyLabel.text ?? String.empty)
         checkSticky = false
     }}
     
@@ -164,11 +164,11 @@ class PairCell: UICollectionViewCell {
 
 protocol PairCellDelegate:AnyObject {
     ///time to create a sticky note
-    func userAddedSticky(for pairCell:PairCell, sticky:String)
+    func userAddsSticky(for pairCell:PairCell, sticky:String)
     
-    func userWantsToDeleteSticky(for pairCell:PairCell)
+    func userDeletesSticky(for pairCell:PairCell)
     
-    func userWantsToEditSticky(for pairCell:PairCell)
+    func userEditsSticky(for pairCell:PairCell)
 }
 
 // MARK: - darkmode lightmode
@@ -249,7 +249,7 @@ extension PairCell {
                 gesture.setTranslation(.zero, in: self)
                 if gesture.view!.center.x <= 20 {
                     gesture.state = .ended
-                    delegate?.userWantsToDeleteSticky(for: self)
+                    delegate?.userDeletesSticky(for: self)
                     stickyLabel.alpha = 0
                     stickyLabelDeleteConfirmationLabel.text = "Done!"
                     stickyLabelDeleteConfirmationLabel.backgroundColor = UIColor(named: "Confirm")
@@ -272,7 +272,7 @@ extension PairCell {
     ///show SwiftUI StickiesView
     @objc func editStickyNote(_ gesture:Tap) {
         if gesture.state == .ended {
-            delegate?.userWantsToEditSticky(for: self)
+            delegate?.userEditsSticky(for: self)
             UserFeedback.triggerSingleHaptic(.light)
 //            pulsateAnimate() //animate so the user notices which pair is being edited
         }

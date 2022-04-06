@@ -8,10 +8,10 @@
 import UIKit
 import SwiftUI
 
-class StickiesVC: UIViewController {
+class PairStickiesVC: UIViewController {
     func setupHostController() {
         let hostingController =
-        UIHostingController(rootView: StickiesView(viewModel: ViewModel(pair: pair), stickyText: pair.sticky) {
+        UIHostingController(rootView: PairStickiesView(viewModel: ViewModel(pair: pair), stickyText: pair.sticky) {
             [weak self] in
             
             self?.dismiss(animated: true)
@@ -39,7 +39,7 @@ class StickiesVC: UIViewController {
     }
 }
 
-extension StickiesVC {
+extension PairStickiesVC {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard
             let location = touches.first?.location(in: view),

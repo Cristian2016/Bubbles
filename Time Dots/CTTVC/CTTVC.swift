@@ -664,7 +664,7 @@ extension CTTVC {
         
         bubble.endCurrentSession() /* model */
         if !bubble.bubbleSessions.isEmpty && bubble.isCalendarEnabled {
-            CalendarEventsManager.shared.createNewEvent(for: bubble.currentSession!)
+            CalManager.shared.createNewEvent(for: bubble.currentSession!)
         }
         
         /* 📺 2.UI part + notifications */
@@ -815,7 +815,7 @@ extension CTTVC:ChronoTimerCellDelegate {
             delayExecution(.now() + 0.1) {[weak self] in
                 self?.notificationsManager.updateStickyNoteInNotification(for: bubble)
                 if let count = bubble.sessions?.count, count > 0 {
-                    CalendarEventsManager.shared.updateEvent(.title(bubble))
+                    CalManager.shared.updateExistingEvent(.title(bubble))
                 }
             }
         }

@@ -524,7 +524,7 @@ extension DetailVC: UIContextMenuInteractionDelegate {
         if willCurrentSessionBeDeleted { bubble.reconfigure(for: .currentSession) }
         
         //⚠️ order matters. first delete event, since event id is the same as session.id. if session deleted first, calendar event has id set to nil. careful!
-        CalendarEventsManager.shared.deleteEvent(with: session.eventID)
+        CalManager.shared.deleteEvent(with: session.eventID)
         AppDelegate.context.delete(session) //if session deleted its pairs will be deleted as well
         CoreDataStack.shared.saveContext()
     }

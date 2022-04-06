@@ -99,6 +99,8 @@ class ViewModel: ObservableObject {
     }
     
     func userTapsStickyInTheList(with content:String) {
+        guard let session = pair.session else { fatalError() }
+        
         pair.sticky = content
         pair.isStickyVisible = true
         
@@ -117,11 +119,14 @@ class ViewModel: ObservableObject {
             newSticky.created = Date()
         }
                 
-        do { try context.save() }
+        do {
+            try context.save()
+            CalManager.shared.updateExistingEvent(.notes(session))
+        }
         catch let error { print(error) }
     }
     
-    func userDeletesSticky(at indexSet:IndexSet) {
+    func userDeletesStickyInTheList(at indexSet:IndexSet) {
         guard let index = indexSet.first else { return }
         
         context.delete(stickies[index])

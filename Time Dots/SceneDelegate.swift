@@ -45,7 +45,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         switch shortcutItem.localizedTitle {
         case "Mark in Calendar":
-            CalendarEventsManager.shared.newQuickActionEvent()
+            CalManager.shared.newQuickActionEvent()
         default: break
         }
     }

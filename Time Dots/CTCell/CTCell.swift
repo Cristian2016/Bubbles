@@ -40,19 +40,7 @@ class CTCell: UITableViewCell {
     
     // MARK: - calendar stuff
     internal var nonCalendarColor:UIColor { isDarkModeOn ? #colorLiteral(red: 0.9976117015, green: 0.8907652497, blue: 0.4120309353, alpha: 1) : #colorLiteral(red: 0.9983770251, green: 0.8866510391, blue: 0.4181298018, alpha: 1).withAlphaComponent(1) }
-    internal let calendarColor = #colorLiteral(red: 0.964641273, green: 0.5988371968, blue: 0.6989173889, alpha: 1)
-    private let calendarImage = #imageLiteral(resourceName: "calendar")
-    
-    private lazy var calendarImageView:UIImageView = {
-        let imageView = UIImageView(image: calendarImage)
-        
-        imageView.isUserInteractionEnabled = true
-        imageView.contentMode = .scaleAspectFit
-        let tap = UITapGestureRecognizer(target: self, action: #selector(calendarStickerTapped(_:)))
-        imageView.addGestureRecognizer(tap)
-        
-        return imageView
-    }()
+    internal let calendarColor = #colorLiteral(red: 0.9984151721, green: 0.5134793993, blue: 0.4874061974, alpha: 1)
     
     // MARK: - outlets
     @IBOutlet weak var secondsButton:SecondsButton! {didSet{

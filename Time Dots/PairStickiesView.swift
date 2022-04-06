@@ -9,7 +9,7 @@ import UIKit
 import SwiftUI
 import CoreData
 
-struct StickiesView: View {
+struct PairStickiesView: View {
     
     // MARK: - Model and Environment
     @Environment(\.colorScheme) var colorScheme //dark/light mode
@@ -21,6 +21,7 @@ struct StickiesView: View {
     var dismiss:(()->())? //dismiss VC when user choses a note or touches [+]
     
     init(viewModel:ViewModel, stickyText:String, closure: (()->())?) {
+        
         self.viewModel = viewModel
         self.dismiss = closure
         self.stickyText = stickyText
@@ -57,10 +58,19 @@ struct StickiesView: View {
     private var isOverMaxCount:Bool { userInput.count > maxUserInputLength }
     
     private var isButtonDisabled:Bool { isIdenticalSticky || isOverMaxCount }
+    
+    private var buttonColor:Color {
+        let condition = isButtonDisabled
+        switch colorScheme {
+            case .light: return condition ? .lightGray : .blue
+            case .dark: return condition ? .lightGray : .white
+            @unknown default: return Color.red
+        }
+    }
 }
 
 // MARK: - Views
-extension StickiesView {
+extension PairStickiesView {
     var body: some View {
         ZStack {
             VStack {
@@ -117,7 +127,9 @@ extension StickiesView {
                         dismiss?()
                     }
             }
-            .onDelete { viewModel.userDeletesSticky(at:$0) }
+            .onDelete {
+                viewModel.userDeletesStickyInTheList(at:$0)
+            }
             .listRowBackground(Color.darkGray)
             
             //prevent app crash when user wants to drag-and-drop text in the textfield
@@ -200,17 +212,6 @@ extension StickiesView {
             Text("Tap [+] to Add Note")
                 .font(.title3)
                 .foregroundColor(.white)
-        }
-    }
-    
-    // MARK: - Methods or properties
-    //button color depends on 1.dark light mode & 2.userInput length
-    private var buttonColor:Color {
-        let condition = isButtonDisabled
-        switch colorScheme {
-            case .light: return condition ? .lightGray : .blue
-            case .dark: return condition ? .lightGray : .white
-            @unknown default: return Color.red
         }
     }
 }

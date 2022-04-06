@@ -11,11 +11,11 @@ import EventKitUI
 import UIKit
 import CoreLocation
 
-extension CalendarEventsManager {
+extension CalManager {
     typealias Store = EKEventStore
 }
 
-class CalendarEventsManager: NSObject {
+class CalManager: NSObject {
     // MARK: -
     private lazy var store = Store() /* read write events */
     private(set) var defaultCalendarTitle = "Time Bubbles 📥"
@@ -77,6 +77,7 @@ class CalendarEventsManager: NSObject {
         }
         catch { }
     }
+    
     func shouldExportToCalendarAllSessions(of bubble:CT) {
         guard
             bubble.isCalendarEnabled,
@@ -89,8 +90,11 @@ class CalendarEventsManager: NSObject {
     private func lastSubeventNote(for session:Session) -> String {
         session._pairs.last!.sticky
     }
-    func createNewEvent(for session: Session) {
+    
+    // MARK: - Main
+    func createNewEvent(for session: Session?) {
         guard
+            let session = session,
             session.isLastPairClosed,
             session.eventID == nil else { return }
         
@@ -105,7 +109,7 @@ class CalendarEventsManager: NSObject {
         CoreDataStack.shared.saveContext()
     }
     
-    func updateEvent(_ kind:EventUpdateKind) {
+    func updateExistingEvent(_ kind:EventUpdateKind) {
         switch kind {
         case .notes(let session):
             guard
@@ -306,7 +310,7 @@ class CalendarEventsManager: NSObject {
     }
     
     // MARK: -
-    static let shared = CalendarEventsManager()
+    static let shared = CalManager()
     private override init() {
         super.init()
     }
