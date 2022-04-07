@@ -8,29 +8,31 @@
 import UIKit
 import SwiftUI
 
+extension PairStickiesVC {
+    typealias HC = UIHostingController
+}
+
 class PairStickiesVC: UIViewController {
     func setupHostController() {
-        let hostingController =
-        UIHostingController(rootView: PairStickiesView(viewModel: PairStickyViewModel(pair: pair), stickyText: pair.sticky) {
-            [weak self] in
+        //hosting controller
+        let hc = HC(rootView: PairStickiesView(.init(pair)) { [weak self] in
             
             self?.dismiss(animated: true)
             self?.reloadStickies?()
         })
         
-        addChild(hostingController)
-        view.addSubview(hostingController.view)
-        hostingController.didMove(toParent: self)
+        addChild(hc)
+        view.addSubview(hc.view)
+        hc.didMove(toParent: self)
         
         let frame = view.frame.concentric(x: .fractional(0.67), y: .fractional(0.52))
-        hostingController.view.frame = frame
-        hostingController.view.center = CGPoint(x: view.center.x + 10, y: view.center.y)
-        hostingController.view.layer.cornerRadius = 30
-        hostingController.view.addShadow()
+        hc.view.frame = frame
+        hc.view.center = CGPoint(x: view.center.x + 10, y: view.center.y)
+        hc.view.layer.cornerRadius = 30
+        hc.view.addShadow()
     }
     
     // MARK: -
-    var snapshot:UIView?
     weak var pair:Pair! {didSet{ setupHostController() }}
     var reloadStickies:(()->())?
     

@@ -16,15 +16,12 @@ struct PairStickiesView: View {
     @Environment(\.presentationMode) var presentation //use it to dismiss
     
     // MARK: -
-    @ObservedObject var viewModel:PairStickyViewModel
-    private var stickyText:String
+    @ObservedObject var viewModel:PairStickyVM
     var dismiss:(()->())? //dismiss VC when user choses a note or touches [+]
     
-    init(viewModel:PairStickyViewModel, stickyText:String, closure: (()->())?) {
-        
+    init(_ viewModel:PairStickyVM, closure: (()->())?) {
         self.viewModel = viewModel
         self.dismiss = closure
-        self.stickyText = stickyText
         self.userInput = userInput
     }
     
@@ -113,13 +110,13 @@ extension PairStickiesView {
         List {
             let filteredStickies = filtered()
             
-            ForEach(filteredStickies) {sticky in
+            ForEach(filteredStickies) { sticky in
                 Text(sticky.content ?? "")
                 //font size and color
                     .font(.title3)
                     .foregroundColor(.white)
                 //make editing sticky visible to the user with a black background
-                    .background((stickyText == sticky.content) ? Color.black : .clear )
+                    .background((viewModel.pair.sticky == sticky.content) ? Color.black : .clear )
                 //user taps a sticky and sets the new note
                     .onTapGesture {
                         viewModel.userTapsStickyInTheList(with: sticky.content ?? "")
@@ -127,10 +124,9 @@ extension PairStickiesView {
                         dismiss?()
                     }
             }
-            .onDelete {
-                viewModel.userDeletesStickyInTheList(at:$0)
-            }
+            .onDelete { viewModel.userDeletesStickyInTheList(at:$0) }
             .listRowBackground(Color.darkGray)
+            .listRowSeparator(.hidden)				
             
             //prevent app crash when user wants to drag-and-drop text in the textfield
             if filteredStickies.isEmpty {
@@ -144,7 +140,6 @@ extension PairStickiesView {
             UITableView.appearance().showsVerticalScrollIndicator = false
         })
         .environment(\.defaultMinListRowHeight, rowHeight)
-        .listRowSeparator(.hidden)
     }
     
     // MARK: - fieldbutton legos

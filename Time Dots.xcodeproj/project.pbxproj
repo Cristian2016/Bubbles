@@ -87,7 +87,7 @@
 		1F8C9D86278CC29B001EF736 /* HMSHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F8C9D85278CC29B001EF736 /* HMSHeader.xib */; };
 		1F8C9D88278CC384001EF736 /* HMSHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8C9D87278CC384001EF736 /* HMSHeader.swift */; };
 		1F8CA54E27C3C4CE000EC556 /* DurationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F8CA54D27C3C4CE000EC556 /* DurationView.xib */; };
-		1F93720B27EDDEA200023440 /* PairStickyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F93720A27EDDEA200023440 /* PairStickyViewModel.swift */; };
+		1F93720B27EDDEA200023440 /* PairStickyVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F93720A27EDDEA200023440 /* PairStickyVM.swift */; };
 		1F94DE9327847E23000CBBAE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2821B76925E4E3620096508C /* Model.xcdatamodeld */; };
 		1F94DE9427847E3B000CBBAE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2821B76925E4E3620096508C /* Model.xcdatamodeld */; };
 		1F94DE9527847EF4000CBBAE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2821B76925E4E3620096508C /* Model.xcdatamodeld */; };
@@ -143,6 +143,9 @@
 		1FD61129278ACBF800F58CFB /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288FD737267CFC030045D8C2 /* Intents.framework */; };
 		1FD6112C278ACBF800F58CFB /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD6112B278ACBF800F58CFB /* IntentHandler.swift */; };
 		1FD61140278ACBF800F58CFB /* VoiceCommands.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1FD61128278ACBF800F58CFB /* VoiceCommands.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1FD7864F27FE0A8A00C6861A /* BubbleStickyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD7864E27FE0A8A00C6861A /* BubbleStickyViewModel.swift */; };
+		1FD7865227FE0AD300C6861A /* BubbleSticky+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD7865027FE0AD300C6861A /* BubbleSticky+CoreDataClass.swift */; };
+		1FD7865327FE0AD300C6861A /* BubbleSticky+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD7865127FE0AD300C6861A /* BubbleSticky+CoreDataProperties.swift */; };
 		1FDA57C527F5820C00B13E48 /* Description File.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1FDA57C427F5820C00B13E48 /* Description File.rtf */; };
 		1FDACAB72682741600357916 /* Pair+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B26BD32653D16C000F112F /* Pair+CoreDataProperties.swift */; };
 		1FDACAB82682741800357916 /* Pair+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B26BD32653D16C000F112F /* Pair+CoreDataProperties.swift */; };
@@ -405,7 +408,7 @@
 		1F8C9D85278CC29B001EF736 /* HMSHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HMSHeader.xib; sourceTree = SOURCE_ROOT; };
 		1F8C9D87278CC384001EF736 /* HMSHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMSHeader.swift; sourceTree = "<group>"; };
 		1F8CA54D27C3C4CE000EC556 /* DurationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DurationView.xib; sourceTree = SOURCE_ROOT; };
-		1F93720A27EDDEA200023440 /* PairStickyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairStickyViewModel.swift; sourceTree = SOURCE_ROOT; };
+		1F93720A27EDDEA200023440 /* PairStickyVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairStickyVM.swift; sourceTree = SOURCE_ROOT; };
 		1F96CDBB27E65BC0001B9963 /* PairStickiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairStickiesVC.swift; sourceTree = "<group>"; };
 		1F96CDBD27E65CE0001B9963 /* PairStickiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairStickiesView.swift; sourceTree = "<group>"; };
 		1F9D2AF626850AB400F9BCDB /* Placeholders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placeholders.swift; sourceTree = "<group>"; };
@@ -429,6 +432,9 @@
 		1FD6112B278ACBF800F58CFB /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
 		1FD6112D278ACBF800F58CFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FD6114B278ACC3800F58CFB /* VoiceCommands.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VoiceCommands.entitlements; sourceTree = "<group>"; };
+		1FD7864E27FE0A8A00C6861A /* BubbleStickyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleStickyViewModel.swift; sourceTree = SOURCE_ROOT; };
+		1FD7865027FE0AD300C6861A /* BubbleSticky+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BubbleSticky+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		1FD7865127FE0AD300C6861A /* BubbleSticky+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BubbleSticky+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		1FDA57C427F5820C00B13E48 /* Description File.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Description File.rtf"; sourceTree = "<group>"; };
 		1FDDCC252768896E00290CFB /* Rose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rose.png; sourceTree = "<group>"; };
 		1FDDCC282768897300290CFB /* Aqua.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Aqua.png; sourceTree = "<group>"; };
@@ -651,7 +657,7 @@
 			children = (
 				1F96CDBD27E65CE0001B9963 /* PairStickiesView.swift */,
 				1F96CDBB27E65BC0001B9963 /* PairStickiesVC.swift */,
-				1F93720A27EDDEA200023440 /* PairStickyViewModel.swift */,
+				1F93720A27EDDEA200023440 /* PairStickyVM.swift */,
 			);
 			name = SwiftUI;
 			sourceTree = "<group>";
@@ -982,6 +988,9 @@
 		28CBA4AF25F39A2700EDFDE3 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				1FD7865027FE0AD300C6861A /* BubbleSticky+CoreDataClass.swift */,
+				1FD7865127FE0AD300C6861A /* BubbleSticky+CoreDataProperties.swift */,
+				1FD7864E27FE0A8A00C6861A /* BubbleStickyViewModel.swift */,
 				2821B76925E4E3620096508C /* Model.xcdatamodeld */,
 				1F3E26A3278C231900BE5452 /* Timer Duration History */,
 				288BBDB2260C81870022773A /* Session.swift */,
@@ -1390,6 +1399,7 @@
 				282B597B25F412EF0081D048 /* DST.swift in Sources */,
 				28119FE1263A8E9300B82E16 /* Local Notifications.swift in Sources */,
 				2821B73C25E4E3020096508C /* SceneDelegate.swift in Sources */,
+				1FD7865327FE0AD300C6861A /* BubbleSticky+CoreDataProperties.swift in Sources */,
 				1F81B21227A5553B00AC9451 /* DoneView.swift in Sources */,
 				1F657EDF278ACDA40077D229 /* Intents.intentdefinition in Sources */,
 				280E1BC225FB71A4004FF6FF /* MarbleProgressMask.swift in Sources */,
@@ -1421,12 +1431,14 @@
 				288BBDB5260C81870022773A /* Session.swift in Sources */,
 				28D9B5D026655B4A0001A996 /* BottomCell.swift in Sources */,
 				1FAFBE0827980FB90030526F /* SecondsSticker.swift in Sources */,
+				1FD7864F27FE0A8A00C6861A /* BubbleStickyViewModel.swift in Sources */,
 				1F68894E2681C166002EFA68 /* DynamicTimeBubbleSelection.intentdefinition in Sources */,
 				1F145ACF27A3F4420076CCD6 /* Fonts.swift in Sources */,
 				280360A025E582790080010F /* Digit.swift in Sources */,
 				2821B76B25E4E3620096508C /* Model.xcdatamodeld in Sources */,
 				1F0AA8AA2684567600732897 /* WidgetDataCoordinator.swift in Sources */,
 				1FFD5CF627A6C19D00B0D2ED /* FetchedResultsControllerDelegate.swift in Sources */,
+				1FD7865227FE0AD300C6861A /* BubbleSticky+CoreDataClass.swift in Sources */,
 				1FBAF2A9276126AA000811B2 /* MoreOptionsColorRect.swift in Sources */,
 				1FA08F0D279A983E0064D6A0 /* UserHintView.swift in Sources */,
 				2803609E25E582790080010F /* OKButton.swift in Sources */,
@@ -1441,7 +1453,7 @@
 				1F3D9483278C494700AE5C97 /* DurationCell.swift in Sources */,
 				28512FA6264D5A70005A2CE5 /* TimeDots1.swift in Sources */,
 				280360A925E582A10080010F /* ColorCircle.swift in Sources */,
-				1F93720B27EDDEA200023440 /* PairStickyViewModel.swift in Sources */,
+				1F93720B27EDDEA200023440 /* PairStickyVM.swift in Sources */,
 				28512FA8264D5A70005A2CE5 /* TimeDots.swift in Sources */,
 				287DCF65265B95CC006F1F99 /* BlinkingCircles.swift in Sources */,
 				1F1D86D12762743F0072B8C3 /* Slide Animation Controllers.swift in Sources */,

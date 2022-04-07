@@ -8,12 +8,12 @@
 import SwiftUI
 import CoreData
 
-class PairStickyViewModel: ObservableObject {
+class PairStickyVM: ObservableObject {
     // MARK: - Publisher
     @Published var stickies = [Sticky]()
     
     // MARK: -
-    private var pair:Pair
+    private(set) var pair:Pair
     var stickyContents = [String]()
     
     // MARK: -
@@ -135,7 +135,7 @@ class PairStickyViewModel: ObservableObject {
     }
     
     // MARK: -
-    init(pair:Pair) {
+    init(_ pair:Pair) {
         self.pair = pair
         fetchAndUpdateStickies()
     }
