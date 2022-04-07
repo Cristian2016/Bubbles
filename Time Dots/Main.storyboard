@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="u8V-k8-Ni2">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -26,52 +27,52 @@
                         <viewControllerLayoutGuide type="bottom" id="bbx-NK-zhe"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" contentMode="left" restorationIdentifier="containerView" id="2eP-hU-psk" userLabel="Screen">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" restorationIdentifier="mainView" translatesAutoresizingMaskIntoConstraints="NO" id="1Zi-nE-98F" userLabel="DPVC Container">
-                                <rect key="frame" x="0.0" y="0.0" width="560" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="374" height="896"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oTD-Ki-YDg">
-                                        <rect key="frame" x="3" y="3" width="554" height="589"/>
+                                        <rect key="frame" x="3" y="3" width="368" height="885"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-8" translatesAutoresizingMaskIntoConstraints="NO" id="kVt-dj-OCL" userLabel="Pickers Stack">
-                                                <rect key="frame" x="0.0" y="0.0" width="554" height="9"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="368" height="370.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8vt-UL-6gq" userLabel="hours stack">
-                                                        <rect key="frame" x="0.0" y="0.0" width="190" height="9"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="128" height="370.5"/>
                                                         <subviews>
                                                             <pickerView userInteractionEnabled="NO" contentMode="scaleToFill" restorationIdentifier="hours" translatesAutoresizingMaskIntoConstraints="NO" id="Jg5-GK-X8C" userLabel="hours">
-                                                                <rect key="frame" x="0.0" y="0.0" width="190" height="9"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="128" height="370.5"/>
                                                             </pickerView>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="p4Q-hS-38Q" userLabel="minutes stack">
-                                                        <rect key="frame" x="182" y="0.0" width="190" height="9"/>
+                                                        <rect key="frame" x="120" y="0.0" width="128" height="370.5"/>
                                                         <subviews>
                                                             <pickerView userInteractionEnabled="NO" contentMode="scaleToFill" restorationIdentifier="minutes" translatesAutoresizingMaskIntoConstraints="NO" id="WQv-bL-pz6" userLabel="minutes">
-                                                                <rect key="frame" x="0.0" y="0.0" width="190" height="9"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="128" height="370.5"/>
                                                             </pickerView>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OOq-yV-Lny" userLabel="seconds stack">
-                                                        <rect key="frame" x="364" y="0.0" width="190" height="9"/>
+                                                        <rect key="frame" x="240" y="0.0" width="128" height="370.5"/>
                                                         <subviews>
                                                             <pickerView userInteractionEnabled="NO" contentMode="scaleToFill" restorationIdentifier="seconds" translatesAutoresizingMaskIntoConstraints="NO" id="2f5-xs-tDH" userLabel="seconds">
-                                                                <rect key="frame" x="0.0" y="0.0" width="190" height="9"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="128" height="370.5"/>
                                                             </pickerView>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zQC-Mk-qkZ" userLabel="OKButton SuperView">
-                                                <rect key="frame" x="0.0" y="17" width="554" height="572"/>
+                                                <rect key="frame" x="0.0" y="378.5" width="368" height="506.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="2Pw-px-lCo" userLabel="789 Stack">
-                                                        <rect key="frame" x="0.0" y="0.0" width="554" height="182.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="368" height="120.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTo-5z-Nfc" customClass="Digit" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="182.5" height="182.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="120.5" height="120.5"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="jTo-5z-Nfc" secondAttribute="height" multiplier="1:1" id="0ig-R3-3cg"/>
@@ -85,7 +86,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYG-2H-qzx" customClass="Digit" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="185.5" y="0.0" width="183" height="182.5"/>
+                                                                <rect key="frame" x="123.5" y="0.0" width="121" height="120.5"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="sYG-2H-qzx" secondAttribute="height" multiplier="1:1" id="H9B-qS-eQl"/>
@@ -99,7 +100,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8t-mH-PWs" customClass="Digit" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="371.5" y="0.0" width="182.5" height="182.5"/>
+                                                                <rect key="frame" x="247.5" y="0.0" width="120.5" height="120.5"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="V8t-mH-PWs" secondAttribute="height" multiplier="1:1" id="UIe-QO-Qly"/>
@@ -115,10 +116,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="CWX-lv-SNF" userLabel="456 Stack">
-                                                        <rect key="frame" x="0.0" y="190.5" width="554" height="183"/>
+                                                        <rect key="frame" x="0.0" y="128.5" width="368" height="120.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="172-eg-SDA" customClass="Digit" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="182.5" height="183"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="120.5" height="120.5"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="172-eg-SDA" secondAttribute="height" multiplier="1:1" id="lvh-z4-Aob"/>
@@ -132,7 +133,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BdM-nr-ScL" customClass="Digit" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="185.5" y="0.0" width="183" height="183"/>
+                                                                <rect key="frame" x="123.5" y="0.0" width="121" height="120.5"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="BdM-nr-ScL" secondAttribute="height" multiplier="1:1" id="RMC-np-Guo"/>
@@ -146,7 +147,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCw-ow-4NC" customClass="Digit" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="371.5" y="0.0" width="182.5" height="183"/>
+                                                                <rect key="frame" x="247.5" y="0.0" width="120.5" height="120.5"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="DCw-ow-4NC" secondAttribute="height" multiplier="1:1" id="6K2-sq-AWZ"/>
@@ -162,10 +163,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="NsR-MD-fWE" userLabel="123 Stack">
-                                                        <rect key="frame" x="0.0" y="381.5" width="554" height="182.5"/>
+                                                        <rect key="frame" x="0.0" y="257" width="368" height="121"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyH-Jr-m6n" customClass="Digit" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="182.5" height="182.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="120.5" height="121"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="yyH-Jr-m6n" secondAttribute="height" multiplier="1:1" id="xon-I0-oYg"/>
@@ -179,7 +180,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zW5-I9-tw2" customClass="Digit" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="185.5" y="0.0" width="183" height="182.5"/>
+                                                                <rect key="frame" x="123.5" y="0.0" width="121" height="121"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="zW5-I9-tw2" secondAttribute="height" multiplier="1:1" id="jKP-QI-m8b"/>
@@ -193,7 +194,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMG-Js-hzn" customClass="Digit" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="371.5" y="0.0" width="182.5" height="182.5"/>
+                                                                <rect key="frame" x="247.5" y="0.0" width="120.5" height="121"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="NMG-Js-hzn" secondAttribute="height" multiplier="1:1" id="kOU-O4-EaQ"/>
@@ -209,9 +210,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="dFP-aK-Qal" userLabel="00 0 ✕ Stack">
-                                                        <rect key="frame" x="0.0" y="572" width="554" height="0.0"/>
+                                                        <rect key="frame" x="0.0" y="386" width="368" height="120.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJt-cp-DhW" customClass="Digit" customModule="Time_Dots" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="120.5" height="120.5"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="RJt-cp-DhW" secondAttribute="height" multiplier="1:1" id="Zur-ui-v6e"/>
@@ -225,7 +227,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOJ-pQ-BEa" customClass="Digit" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="3" y="0.0" width="0.0" height="0.0"/>
+                                                                <rect key="frame" x="123.5" y="0.0" width="121" height="120.5"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="aOJ-pQ-BEa" secondAttribute="height" multiplier="1:1" id="7VJ-OP-Ihl"/>
@@ -239,7 +241,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbb-wx-rra" customClass="Digit" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="6" y="0.0" width="548" height="0.0"/>
+                                                                <rect key="frame" x="247.5" y="0.0" width="120.5" height="120.5"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <gestureRecognizers/>
                                                                 <constraints>
@@ -269,101 +271,101 @@
                                     <constraint firstItem="oTD-Ki-YDg" firstAttribute="top" secondItem="1Zi-nE-98F" secondAttribute="top" constant="3" id="W6Z-kG-MEf"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="D2z-AV-SAc" userLabel="hBlinds">
-                                <rect key="frame" x="3" y="3" width="190" height="338"/>
+                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="D2z-AV-SAc" userLabel="hBlinds">
+                                <rect key="frame" x="3" y="3" width="128" height="370.5"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fPG-tG-A84" userLabel="h0Blind">
-                                        <rect key="frame" x="0.0" y="0.0" width="95" height="338"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fPG-tG-A84" userLabel="h0Blind">
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="370.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bAw-ve-rL0" userLabel="h1Blind">
-                                        <rect key="frame" x="95" y="0.0" width="95" height="338"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bAw-ve-rL0" userLabel="h1Blind">
+                                        <rect key="frame" x="64" y="0.0" width="64" height="370.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
-                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bfe-FN-ozD" userLabel="Hr Stack">
-                                <rect key="frame" x="3" y="232.33333333333337" width="190" height="113"/>
+                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bfe-FN-ozD" userLabel="Hr Stack">
+                                <rect key="frame" x="3" y="248" width="128" height="129.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhY-yt-OsD">
-                                        <rect key="frame" x="0.0" y="0.0" width="190" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="36"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JMD-7B-Z58">
-                                        <rect key="frame" x="0.0" y="36" width="190" height="77"/>
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JMD-7B-Z58">
+                                        <rect key="frame" x="0.0" y="36" width="128" height="93.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Acs-Yr-3Yb" userLabel="mBlinds">
-                                <rect key="frame" x="185" y="3" width="190" height="338"/>
+                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Acs-Yr-3Yb" userLabel="mBlinds">
+                                <rect key="frame" x="123" y="3" width="128" height="370.5"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ehE-ID-2UC" userLabel="m0Blind">
-                                        <rect key="frame" x="0.0" y="0.0" width="95" height="338"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehE-ID-2UC" userLabel="m0Blind">
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="370.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bi1-WT-BZA" userLabel="m1Blind">
-                                        <rect key="frame" x="95" y="0.0" width="95" height="338"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bi1-WT-BZA" userLabel="m1Blind">
+                                        <rect key="frame" x="64" y="0.0" width="64" height="370.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
-                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZMN-Mf-z0B" userLabel="Min Stack">
-                                <rect key="frame" x="185" y="232.33333333333337" width="190" height="113"/>
+                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZMN-Mf-z0B" userLabel="Min Stack">
+                                <rect key="frame" x="123" y="248" width="128" height="129.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekw-ET-hCQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="190" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="36"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fy7-sF-Uk1">
-                                        <rect key="frame" x="0.0" y="36" width="190" height="77"/>
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fy7-sF-Uk1">
+                                        <rect key="frame" x="0.0" y="36" width="128" height="93.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aL9-xc-Ari" userLabel="sBlinds">
-                                <rect key="frame" x="367" y="3" width="190" height="338.5"/>
+                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aL9-xc-Ari" userLabel="sBlinds">
+                                <rect key="frame" x="243" y="3" width="128" height="370.5"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="scg-gf-maY" userLabel="s0Blind">
-                                        <rect key="frame" x="0.0" y="0.0" width="95" height="338.5"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="scg-gf-maY" userLabel="s0Blind">
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="370.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IMe-JD-NS2" userLabel="s1Blind">
-                                        <rect key="frame" x="95" y="0.0" width="95" height="338.5"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IMe-JD-NS2" userLabel="s1Blind">
+                                        <rect key="frame" x="64" y="0.0" width="64" height="370.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
-                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aC0-Co-dYc" userLabel="Sec Stack">
-                                <rect key="frame" x="367" y="232.33333333333337" width="190" height="113"/>
+                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aC0-Co-dYc" userLabel="Sec Stack">
+                                <rect key="frame" x="243" y="248" width="128" height="129.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sec" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Vw-vl-hK7">
-                                        <rect key="frame" x="0.0" y="0.0" width="190" height="38.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="38.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2jm-Xk-KVL">
-                                        <rect key="frame" x="0.0" y="38.5" width="190" height="74.5"/>
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2jm-Xk-KVL">
+                                        <rect key="frame" x="0.0" y="38.5" width="128" height="91"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="efn-Dz-VHo" userLabel="Title Stack">
-                                <rect key="frame" x="3" y="-181" width="554" height="130.5"/>
+                                <rect key="frame" x="3" y="-0.5" width="368" height="130.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWp-X6-tzv" userLabel="Background">
-                                        <rect key="frame" x="0.0" y="0.0" width="554" height="80"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="368" height="80"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="rbu-R3-Szs"/>
@@ -373,7 +375,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Charcoal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="LU3-L7-Nj3" userLabel="Title">
-                                        <rect key="frame" x="0.0" y="80" width="554" height="50.5"/>
+                                        <rect key="frame" x="0.0" y="80" width="368" height="50.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
                                         <nil key="textColor"/>
@@ -382,11 +384,11 @@
                                 </subviews>
                             </stackView>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F9c-un-Ijd" userLabel="SpeechBubble Container">
-                                <rect key="frame" x="3" y="0.0" width="554" height="20"/>
+                                <rect key="frame" x="3" y="0.0" width="368" height="381.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.14999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="wmr-x0-dXX" userLabel="User Friendly Duration">
-                                <rect key="frame" x="5.5" y="232.33333333333337" width="549" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.14999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="wmr-x0-dXX" userLabel="User Friendly Duration">
+                                <rect key="frame" x="3.5" y="248" width="367" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -487,23 +489,23 @@
                         <viewControllerLayoutGuide type="bottom" id="G52-n9-JPi"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" contentMode="scaleAspectFit" restorationIdentifier="containerView" id="r6P-CN-MhD" userLabel="containerView">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleAspectFit" restorationIdentifier="mainView" translatesAutoresizingMaskIntoConstraints="NO" id="H3F-ZY-zUr" userLabel="mainView">
-                                <rect key="frame" x="0.0" y="0.0" width="580" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="394" height="896"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="G9y-Jh-nR1">
-                                        <rect key="frame" x="3" y="-300.5" width="574" height="1201"/>
+                                        <rect key="frame" x="3" y="42" width="388" height="812"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="B9P-p2-c6Z">
-                                                <rect key="frame" x="0.0" y="0.0" width="574" height="1201"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="388" height="812"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-35" translatesAutoresizingMaskIntoConstraints="NO" id="S91-j8-m5M" userLabel="row 0">
-                                                        <rect key="frame" x="0.0" y="0.0" width="574" height="234"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="388" height="156"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bE8-NG-MOZ" customClass="ColorCircle" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="214.5" height="234"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="152.5" height="156"/>
                                                                 <state key="normal" title="Mint">
                                                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -512,7 +514,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVz-Dl-OAs" customClass="ColorCircle" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="179.5" y="0.0" width="215" height="234"/>
+                                                                <rect key="frame" x="117.5" y="0.0" width="153" height="156"/>
                                                                 <state key="normal" title="Slate Blue">
                                                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -521,7 +523,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzo-e8-ccd" userLabel="Chocolate" customClass="ColorCircle" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="359.5" y="0.0" width="214.5" height="234"/>
+                                                                <rect key="frame" x="235.5" y="0.0" width="152.5" height="156"/>
                                                                 <state key="normal" title="Sour Cherry">
                                                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -532,10 +534,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-35" translatesAutoresizingMaskIntoConstraints="NO" id="VQq-a9-raE" userLabel="row 1">
-                                                        <rect key="frame" x="0.0" y="242" width="574" height="233.5"/>
+                                                        <rect key="frame" x="0.0" y="164" width="388" height="156"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5T-Pd-FQZ" userLabel="Silver" customClass="ColorCircle" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="214.5" height="233.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="152.5" height="156"/>
                                                                 <state key="normal" title="Silver">
                                                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -544,7 +546,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tb-Hn-SKh" customClass="ColorCircle" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="179.5" y="0.0" width="215" height="233.5"/>
+                                                                <rect key="frame" x="117.5" y="0.0" width="153" height="156"/>
                                                                 <state key="normal" title="Ultramarine">
                                                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -553,7 +555,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZoO-Fd-0eN" customClass="ColorCircle" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="359.5" y="0.0" width="214.5" height="233.5"/>
+                                                                <rect key="frame" x="235.5" y="0.0" width="152.5" height="156"/>
                                                                 <state key="normal" title="Lemon">
                                                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -564,10 +566,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-35" translatesAutoresizingMaskIntoConstraints="NO" id="LkP-9P-SQv" userLabel="row 2">
-                                                        <rect key="frame" x="0.0" y="483.5" width="574" height="234"/>
+                                                        <rect key="frame" x="0.0" y="328" width="388" height="156"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyk-Zm-KlP" customClass="ColorCircle" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="214.5" height="234"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="152.5" height="156"/>
                                                                 <state key="normal" title="Red">
                                                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -576,7 +578,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7V-YU-7uD" customClass="ColorCircle" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="179.5" y="0.0" width="215" height="234"/>
+                                                                <rect key="frame" x="117.5" y="0.0" width="153" height="156"/>
                                                                 <state key="normal" title="Sky">
                                                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -585,7 +587,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vna-fb-IcR" customClass="ColorCircle" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="359.5" y="0.0" width="214.5" height="234"/>
+                                                                <rect key="frame" x="235.5" y="0.0" width="152.5" height="156"/>
                                                                 <state key="normal" title="Bubble Gum">
                                                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -596,10 +598,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-35" translatesAutoresizingMaskIntoConstraints="NO" id="ydF-OI-eYQ" userLabel="row 3">
-                                                        <rect key="frame" x="0.0" y="725.5" width="574" height="233.5"/>
+                                                        <rect key="frame" x="0.0" y="492" width="388" height="156"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAq-xg-aYH" customClass="ColorCircle" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="214.5" height="233.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="152.5" height="156"/>
                                                                 <state key="normal" title="Green">
                                                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -608,7 +610,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5TR-ce-3iW" userLabel="Sour Cherry" customClass="ColorCircle" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="179.5" y="0.0" width="215" height="233.5"/>
+                                                                <rect key="frame" x="117.5" y="0.0" width="153" height="156"/>
                                                                 <state key="normal" title="Charcoal">
                                                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -617,7 +619,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lot-ky-aPF" customClass="ColorCircle" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="359.5" y="0.0" width="214.5" height="233.5"/>
+                                                                <rect key="frame" x="235.5" y="0.0" width="152.5" height="156"/>
                                                                 <state key="normal" title="Magenta">
                                                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -628,10 +630,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-35" translatesAutoresizingMaskIntoConstraints="NO" id="Zcz-c1-Lld" userLabel="row 4">
-                                                        <rect key="frame" x="0.0" y="967" width="574" height="234"/>
+                                                        <rect key="frame" x="0.0" y="656" width="388" height="156"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXG-A5-9pg" customClass="ColorCircle" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="214.5" height="234"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="152.5" height="156"/>
                                                                 <state key="normal" title="Purple">
                                                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -640,7 +642,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gM-ao-ntJ" customClass="ColorCircle" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="179.5" y="0.0" width="215" height="234"/>
+                                                                <rect key="frame" x="117.5" y="0.0" width="153" height="156"/>
                                                                 <state key="normal" title="Orange">
                                                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -649,7 +651,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDR-dO-yTD" customClass="ColorCircle" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="359.5" y="0.0" width="214.5" height="234"/>
+                                                                <rect key="frame" x="235.5" y="0.0" width="152.5" height="156"/>
                                                                 <state key="normal" title="Chocolate">
                                                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -713,11 +715,11 @@
                         <viewControllerLayoutGuide type="bottom" id="ZWg-7P-tbk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="editDurationView" id="rAX-NB-FwG">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" restorationIdentifier="container" translatesAutoresizingMaskIntoConstraints="NO" id="CcF-Se-5R7" userLabel="Container">
-                                <rect key="frame" x="173.5" y="156" width="253" height="288"/>
+                                <rect key="frame" x="80.5" y="304" width="253" height="288"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0SP-YE-fdE" customClass="TableBackground" customModule="Time_Dots" customModuleProvider="target">
                                         <rect key="frame" x="36.5" y="13" width="180" height="262"/>
@@ -763,13 +765,13 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faP-Vj-k5C" userLabel="3 Dots Top">
-                                                <rect key="frame" x="80" y="59.5" width="20.5" height="28"/>
+                                                <rect key="frame" x="79" y="59" width="22" height="29"/>
                                                 <fontDescription key="fontDescription" name="SFCompactText-Semibold" family="SF Compact Text" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8D2-T4-RZJ" userLabel="3 Dots Bottom">
-                                                <rect key="frame" x="80" y="232" width="20.5" height="28"/>
+                                                <rect key="frame" x="79" y="231.5" width="22" height="29"/>
                                                 <fontDescription key="fontDescription" name="SFCompactText-Semibold" family="SF Compact Text" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -971,7 +973,7 @@
                                 </constraints>
                             </view>
                             <pickerView contentMode="scaleToFill" restorationIdentifier="hr" id="Hry-GB-eTX" userLabel="hours">
-                                <rect key="frame" x="112" y="573" width="341" height="116"/>
+                                <rect key="frame" x="112" y="573" width="155" height="116"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="dataSource" destination="KfT-Pk-8HO" id="c25-en-vma"/>
@@ -979,7 +981,7 @@
                                 </connections>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" restorationIdentifier="sec" id="Ibq-Yw-Zqn" userLabel="seconds">
-                                <rect key="frame" x="236" y="573" width="341" height="116"/>
+                                <rect key="frame" x="236" y="573" width="155" height="116"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="dataSource" destination="KfT-Pk-8HO" id="opl-Wk-HQu"/>
@@ -987,7 +989,7 @@
                                 </connections>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" restorationIdentifier="min" id="PJi-qa-cOH" userLabel="minutes">
-                                <rect key="frame" x="16" y="573" width="341" height="116"/>
+                                <rect key="frame" x="16" y="573" width="155" height="116"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="dataSource" destination="KfT-Pk-8HO" id="SdJ-QR-81X"/>
@@ -1030,15 +1032,15 @@
             <objects>
                 <tableViewController storyboardIdentifier="ChronoTimersTVC" title="CTTVC" extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AgP-Id-IcV" customClass="CTTVC" customModule="Time_Dots" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" contentMode="scaleAspectFit" restorationIdentifier="table" insetsLayoutMarginsFromSafeArea="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTQ-AC-qCU">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" restorationIdentifier="cell" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="129" id="62q-kF-okJ">
-                                <rect key="frame" x="0.0" y="44.5" width="600" height="129"/>
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="129"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="62q-kF-okJ" id="hFy-VO-oXW">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="129"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="129"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1072,14 +1074,14 @@
                         <viewControllerLayoutGuide type="bottom" id="xXw-hP-c72"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5zD-tJ-lRo">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ISA-zM-Bei" userLabel="Background">
-                                <rect key="frame" x="20" y="0.0" width="580" height="600"/>
+                                <rect key="frame" x="20" y="0.0" width="394" height="896"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dZt-tW-9hs">
-                                        <rect key="frame" x="0.0" y="232" width="580" height="368"/>
+                                        <rect key="frame" x="0.0" y="276" width="394" height="620"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eJJ-WT-5wO">
                                             <size key="itemSize" width="128" height="128"/>
@@ -1099,7 +1101,7 @@
                                         </cells>
                                     </collectionView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YLu-Qc-uXr">
-                                        <rect key="frame" x="0.0" y="0.0" width="580" height="232"/>
+                                        <rect key="frame" x="0.0" y="44" width="394" height="232"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="232" id="e1R-Ch-xac"/>
@@ -1137,24 +1139,24 @@
                                 </constraints>
                             </view>
                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Wh3-PM-UNA" userLabel="History Empty Stack">
-                                <rect key="frame" x="49" y="207" width="522" height="306.5"/>
+                                <rect key="frame" x="39.5" y="396" width="355" height="224"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="h4G-4i-GjI">
-                                        <rect key="frame" x="130.5" y="0.0" width="261" height="261"/>
+                                        <rect key="frame" x="89" y="0.0" width="177" height="177.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="h4G-4i-GjI" secondAttribute="height" multiplier="1:1" id="gJL-M3-HlI"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xH2-pY-m3b">
-                                        <rect key="frame" x="160" y="269" width="202.5" height="37.5"/>
+                                        <rect key="frame" x="73" y="185.5" width="209.5" height="38.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History Empty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r32-rN-Afg">
-                                                <rect key="frame" x="0.0" y="0.0" width="202.5" height="37.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="209.5" height="38.5"/>
                                                 <fontDescription key="fontDescription" name="SFCompactText-Regular" family="SF Compact Text" pointSize="32"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7W-1Y-ntz">
-                                                <rect key="frame" x="0.0" y="37.5" width="0.0" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="38.5" width="0.0" height="0.0"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
                                                 <color key="textColor" systemColor="systemGrayColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1210,11 +1212,11 @@
                         <viewControllerLayoutGuide type="bottom" id="cNC-cq-4dL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="info" id="1mo-MK-MyM">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UJe-K6-5bk" customClass="UserInfoBackground" customModule="Time_Dots" customModuleProvider="target">
-                                <rect key="frame" x="30" y="45" width="540" height="510"/>
+                                <rect key="frame" x="20.5" y="67" width="373" height="762"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
@@ -1229,10 +1231,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" placeholderIntrinsicWidth="314" placeholderIntrinsicHeight="448" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAN-NR-n7z">
-                                <rect key="frame" x="38" y="276" width="524" height="271"/>
+                                <rect key="frame" x="28.5" y="229" width="357" height="592"/>
                             </scrollView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gestures" translatesAutoresizingMaskIntoConstraints="NO" id="yv0-PM-TvA">
-                                <rect key="frame" x="54.5" y="53" width="491" height="223"/>
+                                <rect key="frame" x="37.5" y="75" width="339" height="154"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="yv0-PM-TvA" secondAttribute="height" multiplier="1224:556" id="bK1-N2-Rch"/>
                                 </constraints>
@@ -1275,30 +1277,30 @@
                         <viewControllerLayoutGuide type="bottom" id="kc2-VD-Ofs"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="puiimei" id="azf-02-dfv">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wON-W1-wPE" userLabel="Background">
-                                <rect key="frame" x="0.0" y="0.0" width="552" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="381" height="896"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="IgC-pp-eTP" userLabel="Main Stack">
-                                        <rect key="frame" x="22" y="0.0" width="508" height="584"/>
+                                        <rect key="frame" x="15" y="44" width="350.5" height="836"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QB3-hN-tbK" userLabel="Text Stack">
-                                                <rect key="frame" x="0.0" y="0.0" width="508" height="172.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="350.5" height="172.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hW3-Xb-q3k" customClass="TitleSymbol" customModule="Time_Dots" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="508" height="50.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="350.5" height="50.5"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50.600000000000001" id="Eu1-sv-ei0"/>
                                                         </constraints>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="753" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="09K-DX-h99">
-                                                        <rect key="frame" x="0.0" y="58.5" width="508" height="70"/>
+                                                        <rect key="frame" x="0.0" y="58.5" width="350.5" height="70"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="tiR-xo-UXh">
-                                                                <rect key="frame" x="0.0" y="0.0" width="250" height="70"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="171.5" height="70"/>
                                                                 <color key="tintColor" systemColor="systemGray2Color"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="filled" title="Edit Duration" cornerStyle="medium" titleAlignment="automatic">
@@ -1310,7 +1312,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Smw-zr-Gr7">
-                                                                <rect key="frame" x="258" y="0.0" width="250" height="70"/>
+                                                                <rect key="frame" x="179.5" y="0.0" width="171" height="70"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="filled" title="Show Duration" cornerStyle="medium" titleAlignment="automatic">
@@ -1327,7 +1329,7 @@
                                                         </constraints>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose New Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" showsExpansionTextWhenTruncated="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fWY-Su-klp">
-                                                        <rect key="frame" x="0.0" y="136.5" width="508" height="36"/>
+                                                        <rect key="frame" x="0.0" y="136.5" width="350.5" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
                                                         <color key="textColor" systemColor="systemGrayColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1339,13 +1341,13 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="d2c-ND-ftb" userLabel="Colors Stack">
-                                                <rect key="frame" x="0.0" y="180.5" width="508" height="403.5"/>
+                                                <rect key="frame" x="0.0" y="180.5" width="350.5" height="655.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uQw-hE-5UU" userLabel="Row 1">
-                                                        <rect key="frame" x="0.0" y="0.0" width="508" height="63"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="350.5" height="105"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhG-S4-H10" customClass="MoreOptionsColorRect" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="166" height="63"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="113.5" height="105"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="Mint">
@@ -1361,7 +1363,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pkf-Hv-IOz" customClass="MoreOptionsColorRect" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="171" y="0.0" width="166" height="63"/>
+                                                                <rect key="frame" x="118.5" y="0.0" width="113.5" height="105"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="Slate Blue">
@@ -1377,7 +1379,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3B4-G6-EJy" customClass="MoreOptionsColorRect" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="342" y="0.0" width="166" height="63"/>
+                                                                <rect key="frame" x="237" y="0.0" width="113.5" height="105"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="Sour Cherry">
@@ -1395,10 +1397,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hMd-wZ-H9k" userLabel="Row 2">
-                                                        <rect key="frame" x="0.0" y="68" width="508" height="63"/>
+                                                        <rect key="frame" x="0.0" y="110" width="350.5" height="105"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUr-8b-m5z" customClass="MoreOptionsColorRect" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="166" height="63"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="113.5" height="105"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="Silver">
@@ -1414,7 +1416,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRj-iR-HeO" customClass="MoreOptionsColorRect" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="171" y="0.0" width="166" height="63"/>
+                                                                <rect key="frame" x="118.5" y="0.0" width="113.5" height="105"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="Ultramarine">
@@ -1430,7 +1432,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JEm-XN-VgQ" customClass="MoreOptionsColorRect" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="342" y="0.0" width="166" height="63"/>
+                                                                <rect key="frame" x="237" y="0.0" width="113.5" height="105"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="Lemon">
@@ -1448,10 +1450,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="EbZ-hx-8fT" userLabel="Row 3">
-                                                        <rect key="frame" x="0.0" y="136" width="508" height="63.5"/>
+                                                        <rect key="frame" x="0.0" y="220" width="350.5" height="105.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gsu-PR-art" customClass="MoreOptionsColorRect" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="166" height="63.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="113.5" height="105.5"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="Red">
@@ -1467,7 +1469,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6J6-KL-F2L" customClass="MoreOptionsColorRect" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="171" y="0.0" width="166" height="63.5"/>
+                                                                <rect key="frame" x="118.5" y="0.0" width="113.5" height="105.5"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="Sky">
@@ -1483,7 +1485,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZH-YZ-HlB" customClass="MoreOptionsColorRect" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="342" y="0.0" width="166" height="63.5"/>
+                                                                <rect key="frame" x="237" y="0.0" width="113.5" height="105.5"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="Bubble Gum">
@@ -1501,10 +1503,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="j74-am-w05" userLabel="Row 4">
-                                                        <rect key="frame" x="0.0" y="204.5" width="508" height="63"/>
+                                                        <rect key="frame" x="0.0" y="330.5" width="350.5" height="105"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6DB-uH-99i" customClass="MoreOptionsColorRect" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="166" height="63"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="113.5" height="105"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="Green">
@@ -1520,7 +1522,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ad4-ib-Jk1" customClass="MoreOptionsColorRect" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="171" y="0.0" width="166" height="63"/>
+                                                                <rect key="frame" x="118.5" y="0.0" width="113.5" height="105"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="Charcoal">
@@ -1536,7 +1538,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCY-yR-1yT" customClass="MoreOptionsColorRect" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="342" y="0.0" width="166" height="63"/>
+                                                                <rect key="frame" x="237" y="0.0" width="113.5" height="105"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="Magenta">
@@ -1554,10 +1556,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="T1k-ME-Olt" userLabel="Row 5">
-                                                        <rect key="frame" x="0.0" y="272.5" width="508" height="63"/>
+                                                        <rect key="frame" x="0.0" y="440.5" width="350.5" height="105"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kav-K7-toi" customClass="MoreOptionsColorRect" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="166" height="63"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="113.5" height="105"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="Purple">
@@ -1573,7 +1575,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSj-u1-eW6" customClass="MoreOptionsColorRect" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="171" y="0.0" width="166" height="63"/>
+                                                                <rect key="frame" x="118.5" y="0.0" width="113.5" height="105"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="Orange">
@@ -1589,7 +1591,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybr-Jy-jqs" customClass="MoreOptionsColorRect" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="342" y="0.0" width="166" height="63"/>
+                                                                <rect key="frame" x="237" y="0.0" width="113.5" height="105"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="Chocolate">
@@ -1607,10 +1609,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" restorationIdentifier="extraColorsRow" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ocg-uG-unB" userLabel="Row 6">
-                                                        <rect key="frame" x="0.0" y="340.5" width="508" height="63"/>
+                                                        <rect key="frame" x="0.0" y="550.5" width="350.5" height="105"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rax-G4-YqO" customClass="MoreOptionsColorRect" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="166" height="63"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="113.5" height="105"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="Aqua">
@@ -1626,7 +1628,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfD-4j-Okk" customClass="MoreOptionsColorRect" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="171" y="0.0" width="166" height="63"/>
+                                                                <rect key="frame" x="118.5" y="0.0" width="113.5" height="105"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="Byzantium">
@@ -1642,7 +1644,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGH-v7-VhK" customClass="MoreOptionsColorRect" customModule="Time_Dots" customModuleProvider="target">
-                                                                <rect key="frame" x="342" y="0.0" width="166" height="63"/>
+                                                                <rect key="frame" x="237" y="0.0" width="113.5" height="105"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="Rose">
@@ -1748,18 +1750,18 @@
                         <viewControllerLayoutGuide type="bottom" id="Ybn-vc-cpd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="deleteActionView" id="buf-D3-QGT">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Welcome puta to the show! hehehe" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oqZ-it-hE6">
-                                <rect key="frame" x="180" y="150.5" width="240" height="299"/>
+                                <rect key="frame" x="87" y="298.5" width="240" height="299"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T6a-XO-32k" customClass="TableBackground" customModule="Time_Dots" customModuleProvider="target">
-                                <rect key="frame" x="200" y="175.5" width="200" height="249"/>
+                                <rect key="frame" x="107" y="323.5" width="200" height="249"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="HZu-62-uVM">
                                         <rect key="frame" x="20" y="24" width="160" height="201"/>
@@ -1864,16 +1866,16 @@
             </objects>
             <point key="canvasLocation" x="2606" y="-563"/>
         </scene>
-        <!--Pair StickiesVC-->
+        <!--StickiesVC-->
         <scene sceneID="QY9-pm-neo">
             <objects>
-                <viewController storyboardIdentifier="StickiesVC" modalPresentationStyle="overFullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sq7-vU-2wn" customClass="PairStickiesVC" customModule="Time_Dots" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StickiesVC" modalPresentationStyle="overFullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sq7-vU-2wn" customClass="StickiesVC" customModule="Time_Dots" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="m8J-QZ-YxO"/>
                         <viewControllerLayoutGuide type="bottom" id="3DJ-t2-X3m"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="StickiesView" id="oyV-kP-Y6T">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
@@ -1889,12 +1891,10 @@
                     <tabBarItem key="tabBarItem" title="Item" id="5y0-gg-neN"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="rMQ-sc-4q1">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="89J-8F-cMg">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>

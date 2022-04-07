@@ -184,7 +184,7 @@ extension BottomCell: UICollectionViewDelegate {
     
     private func showStickiesView(for pair:Pair, and pairCell:PairCell) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let stickiesVC = storyboard.instantiateViewController(withIdentifier: "StickiesVC") as? PairStickiesVC else { return }
+        guard let stickiesVC = storyboard.instantiateViewController(withIdentifier: "StickiesVC") as? StickiesVC else { return }
         guard let detailVC = viewController() as? DetailVC else { return }
         
         NotificationCenter.default.post(name: Post.animatePairCell, object: pairCell)
