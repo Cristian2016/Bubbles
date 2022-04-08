@@ -169,7 +169,7 @@ extension DeleteActionVC {
     }
 }
 
-class Background: UIView {
+class BubblesBackground: UIView {
     var path:UIBezierPath!
     var fillColor:UIColor = UIColor.white {didSet{ setNeedsDisplay() }}
     

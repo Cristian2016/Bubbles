@@ -74,6 +74,7 @@
 		1F68894E2681C166002EFA68 /* DynamicTimeBubbleSelection.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 1F68894D2681C166002EFA68 /* DynamicTimeBubbleSelection.intentdefinition */; };
 		1F68894F2681C166002EFA68 /* DynamicTimeBubbleSelection.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 1F68894D2681C166002EFA68 /* DynamicTimeBubbleSelection.intentdefinition */; };
 		1F6956CE277C81F1002CD399 /* Segues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6956CD277C81F1002CD399 /* Segues.swift */; };
+		1F6A1DB128000AE50024D48F /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6A1DB028000AE50024D48F /* Note.swift */; };
 		1F6DDD862770F5EB0054D75D /* SlotsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6DDD852770F5EB0054D75D /* SlotsManager.swift */; };
 		1F78090426827FEA004CBAF5 /* RGBTricolor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280360A425E582A10080010F /* RGBTricolor.swift */; };
 		1F78090526827FEB004CBAF5 /* RGBTricolor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280360A425E582A10080010F /* RGBTricolor.swift */; };
@@ -399,6 +400,7 @@
 		1F686E1F278F50DF0032279B /* CT+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CT+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1F68894D2681C166002EFA68 /* DynamicTimeBubbleSelection.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = DynamicTimeBubbleSelection.intentdefinition; path = TimeBubblesWidget/DynamicTimeBubbleSelection.intentdefinition; sourceTree = SOURCE_ROOT; };
 		1F6956CD277C81F1002CD399 /* Segues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segues.swift; sourceTree = SOURCE_ROOT; };
+		1F6A1DB028000AE50024D48F /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = SOURCE_ROOT; };
 		1F6DDD852770F5EB0054D75D /* SlotsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotsManager.swift; sourceTree = "<group>"; };
 		1F7973AE2786CE3D00AFFE0B /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		1F7DABA127A13CCB003FD740 /* DeleteActionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteActionVC.swift; sourceTree = "<group>"; };
@@ -988,6 +990,7 @@
 		28CBA4AF25F39A2700EDFDE3 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				1F6A1DB028000AE50024D48F /* Note.swift */,
 				1FD7865027FE0AD300C6861A /* BubbleSticky+CoreDataClass.swift */,
 				1FD7865127FE0AD300C6861A /* BubbleSticky+CoreDataProperties.swift */,
 				1FD7864E27FE0A8A00C6861A /* BubbleStickyViewModel.swift */,
@@ -1434,6 +1437,7 @@
 				1FD7864F27FE0A8A00C6861A /* BubbleStickyViewModel.swift in Sources */,
 				1F68894E2681C166002EFA68 /* DynamicTimeBubbleSelection.intentdefinition in Sources */,
 				1F145ACF27A3F4420076CCD6 /* Fonts.swift in Sources */,
+				1F6A1DB128000AE50024D48F /* Note.swift in Sources */,
 				280360A025E582790080010F /* Digit.swift in Sources */,
 				2821B76B25E4E3620096508C /* Model.xcdatamodeld in Sources */,
 				1F0AA8AA2684567600732897 /* WidgetDataCoordinator.swift in Sources */,

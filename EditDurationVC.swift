@@ -825,7 +825,7 @@ class TableBackground:UIView {
     }
 }
 
-class Label: UILabel { /* decided not to implement anything in the end */}
+class BubblesLabel: UILabel { /* decided not to implement anything in the end */}
 
 extension EditDurationVC:NSFetchedResultsControllerDelegate {
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChangeContentWith snapshot: NSDiffableDataSourceSnapshotReference) {

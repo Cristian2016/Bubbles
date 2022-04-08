@@ -19,9 +19,9 @@ class DurationCell: UITableViewCell {
    */
     
     // MARK: - Outlets
-    @IBOutlet weak var hrLabel: Label!
-    @IBOutlet weak var minLabel: Label!
-    @IBOutlet weak var secLabel: Label!
+    @IBOutlet weak var hrLabel: BubblesLabel!
+    @IBOutlet weak var minLabel: BubblesLabel!
+    @IBOutlet weak var secLabel: BubblesLabel!
     
     // MARK: - methods
     func configureLabels(duration:Float) {
