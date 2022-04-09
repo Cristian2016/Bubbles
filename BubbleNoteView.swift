@@ -16,17 +16,31 @@ class BubbleNoteView: UIView {
     @IBOutlet weak var label: UILabel!
     
     // MARK: -
+    lazy var pan:UIPanGestureRecognizer = {
+        let pan = UIPanGestureRecognizer()
+        addGestureRecognizer(pan)
+        return pan
+    }()
+    
+    lazy var tap:UITapGestureRecognizer = {
+        let tap = UITapGestureRecognizer()
+        addGestureRecognizer(tap)
+        return tap
+    }()
+    
+    // MARK: -
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setup()
+        setupNIB()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        setup()
+        setupNIB()
     }
     
-    func setup() {
+    //setup NIB and gestures
+    private func setupNIB() {
         let nibFile = UINib(nibName: "BubbleNoteView", bundle: nil)
         guard let nibView = nibFile.instantiate(withOwner: self).first as? UIView else { fatalError() }
         container = nibView

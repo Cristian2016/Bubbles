@@ -112,7 +112,10 @@ class CTCell: UITableViewCell {
         stickyNote.field.restorationIdentifier = "ctCell"
     }}
     
-    @IBOutlet weak var bubbleNote: BubbleNoteView!
+    @IBOutlet weak var bubbleNote: BubbleNoteView! {didSet{
+        bubbleNote.tap.addTarget(self, action: <#T##Selector#>)
+        bubbleNote.pan.addTarget(self, action: <#T##Selector#>)
+    }}
     
     @IBOutlet weak var calendarSticker: UIImageView!
     
@@ -316,6 +319,11 @@ protocol ChronoTimerCellDelegate:AnyObject {
     func calendarStickerTapped(cellIndex index:Int)
     
     func undoLastActionTapped(_ button:UIButton)
+    
+    //handling stickyNote
+    func userTappedStickyNote(cellIndex index:Int)
+    
+    func userPannedOnStickyNote(cellIndex index:Int)
 }
 
 // MARK: - stickies
@@ -439,5 +447,28 @@ extension CTCell {
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
         selectionStyle = .gray
+    }
+}
+
+//handle sticky note
+extension CTCell {
+    @objc private func handleStickyNoteTap(_ gesture:UITapGestureRecognizer) {
+        if gesture.state == .ended {
+            print(#function)
+        }
+    }
+    
+    @objc private func handleStickyNotePan(_ gesture:UIPanGestureRecognizer) {
+        switch gesture.state {
+            case .began:
+                print("began")
+            case .changed:
+                print("changed")
+            case .cancelled:
+                print("cancelled")
+            case .ended:
+                print("ended")
+            default: break
+        }
     }
 }
