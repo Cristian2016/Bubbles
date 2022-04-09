@@ -112,6 +112,8 @@ class CTCell: UITableViewCell {
         stickyNote.field.restorationIdentifier = "ctCell"
     }}
     
+    @IBOutlet weak var bubbleNote: BubbleNoteView!
+    
     @IBOutlet weak var calendarSticker: UIImageView!
     
     @IBOutlet weak var marble: Marble!

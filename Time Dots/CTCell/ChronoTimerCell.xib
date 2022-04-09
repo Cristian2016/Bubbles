@@ -4,8 +4,8 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -66,17 +66,16 @@
                         <rect key="frame" x="9.3333333333333286" y="6" width="148" height="69.333333333333329"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="dro-Ar-APE" secondAttribute="height" multiplier="2834:1328" id="Ba8-pO-B35"/>
+                            <constraint firstAttribute="width" secondItem="dro-Ar-APE" secondAttribute="height" multiplier="2.134" id="Ba8-pO-B35"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eut-c6-BPP">
-                        <rect key="frame" x="263" y="99" width="42" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" name="AquaIntense"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" restorationIdentifier="BubbleNoteView" translatesAutoresizingMaskIntoConstraints="NO" id="SXX-I7-MhG" customClass="BubbleNoteView" customModule="Time_Dots" customModuleProvider="target">
+                        <rect key="frame" x="4" y="4" width="148" height="69.333333333333329"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="SXX-I7-MhG" secondAttribute="height" multiplier="2.134" id="GbU-W0-U24"/>
+                        </constraints>
+                    </view>
                     <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahh-Xv-wwa" customClass="Marble" customModule="Time_Dots" customModuleProvider="target">
                         <rect key="frame" x="349.66666666666669" y="10" width="200.00000000000006" height="200"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -150,7 +149,9 @@
                     <constraint firstItem="wjg-wt-HNH" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.28" id="Nvh-Vc-fAp"/>
                     <constraint firstItem="8vB-rq-CO6" firstAttribute="centerX" secondItem="Paf-ho-lUV" secondAttribute="centerX" multiplier="0.9" id="O7X-Yp-sk7"/>
                     <constraint firstItem="mgt-Pa-bd1" firstAttribute="centerX" secondItem="cP9-eW-5Kh" secondAttribute="centerX" multiplier="0.76" id="Tlg-WW-Xtw"/>
+                    <constraint firstItem="SXX-I7-MhG" firstAttribute="width" secondItem="cP9-eW-5Kh" secondAttribute="width" multiplier="0.74" id="VJ2-yv-w0f"/>
                     <constraint firstItem="ahh-Xv-wwa" firstAttribute="bottom" secondItem="68O-w2-G7g" secondAttribute="bottom" id="VsO-mE-qQQ"/>
+                    <constraint firstItem="SXX-I7-MhG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="XGi-wy-dkY"/>
                     <constraint firstItem="BzW-2w-ztq" firstAttribute="centerX" secondItem="68O-w2-G7g" secondAttribute="centerX" id="bqS-9I-972"/>
                     <constraint firstItem="BSy-r6-QFF" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="cDW-Ua-ZpB"/>
                     <constraint firstItem="5eC-W8-2Od" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.28" id="cO6-GS-QLd"/>
@@ -167,12 +168,14 @@
                     <constraint firstItem="wjg-wt-HNH" firstAttribute="centerY" secondItem="68O-w2-G7g" secondAttribute="centerY" multiplier="1.73" id="nZY-Tm-m3X"/>
                     <constraint firstItem="nic-AJ-ITF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="tvR-Iu-Ycz"/>
                     <constraint firstItem="BzW-2w-ztq" firstAttribute="centerY" secondItem="68O-w2-G7g" secondAttribute="centerY" id="vdr-xd-JKX"/>
+                    <constraint firstItem="SXX-I7-MhG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="wEf-dA-zvY"/>
                     <constraint firstItem="dro-Ar-APE" firstAttribute="width" secondItem="cP9-eW-5Kh" secondAttribute="width" multiplier="0.74" id="xA6-bL-dBo"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <gestureRecognizers/>
             <connections>
+                <outlet property="bubbleNote" destination="SXX-I7-MhG" id="E9d-Sc-o2f"/>
                 <outlet property="calendarSticker" destination="nic-AJ-ITF" id="Deo-KX-jVW"/>
                 <outlet property="doneLine" destination="yKR-Gl-Gma" id="8xV-6n-mDU"/>
                 <outlet property="doneSticker" destination="wjg-wt-HNH" id="ie5-YS-Ty0"/>
@@ -196,8 +199,8 @@
     </objects>
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>
-        <namedColor name="AquaIntense">
-            <color red="0.38199999928474426" green="0.85100001096725464" blue="0.88200002908706665" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

@@ -74,7 +74,6 @@
 		1F68894E2681C166002EFA68 /* DynamicTimeBubbleSelection.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 1F68894D2681C166002EFA68 /* DynamicTimeBubbleSelection.intentdefinition */; };
 		1F68894F2681C166002EFA68 /* DynamicTimeBubbleSelection.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 1F68894D2681C166002EFA68 /* DynamicTimeBubbleSelection.intentdefinition */; };
 		1F6956CE277C81F1002CD399 /* Segues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6956CD277C81F1002CD399 /* Segues.swift */; };
-		1F6A1DB128000AE50024D48F /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6A1DB028000AE50024D48F /* Note.swift */; };
 		1F6DDD862770F5EB0054D75D /* SlotsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6DDD852770F5EB0054D75D /* SlotsManager.swift */; };
 		1F78090426827FEA004CBAF5 /* RGBTricolor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280360A425E582A10080010F /* RGBTricolor.swift */; };
 		1F78090526827FEB004CBAF5 /* RGBTricolor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280360A425E582A10080010F /* RGBTricolor.swift */; };
@@ -162,6 +161,9 @@
 		1FDACAC52682743600357916 /* DST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282B597A25F412EF0081D048 /* DST.swift */; };
 		1FDACAC62682745800357916 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2803607C25E5160F0080010F /* Globals.swift */; };
 		1FDACAC72682745900357916 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2803607C25E5160F0080010F /* Globals.swift */; };
+		1FDB7A4B2801521300C917F4 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDB7A4A2801521300C917F4 /* Note.swift */; };
+		1FDB7A4D280152C000C917F4 /* BubbleNoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FDB7A4C280152C000C917F4 /* BubbleNoteView.xib */; };
+		1FDB7A4F280152DF00C917F4 /* BubbleNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDB7A4E280152DF00C917F4 /* BubbleNoteView.swift */; };
 		1FDDCC262768896E00290CFB /* Rose.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FDDCC252768896E00290CFB /* Rose.png */; };
 		1FDDCC272768896E00290CFB /* Rose.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FDDCC252768896E00290CFB /* Rose.png */; };
 		1FDDCC292768897300290CFB /* Aqua.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FDDCC282768897300290CFB /* Aqua.png */; };
@@ -400,7 +402,6 @@
 		1F686E1F278F50DF0032279B /* CT+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CT+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1F68894D2681C166002EFA68 /* DynamicTimeBubbleSelection.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = DynamicTimeBubbleSelection.intentdefinition; path = TimeBubblesWidget/DynamicTimeBubbleSelection.intentdefinition; sourceTree = SOURCE_ROOT; };
 		1F6956CD277C81F1002CD399 /* Segues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segues.swift; sourceTree = SOURCE_ROOT; };
-		1F6A1DB028000AE50024D48F /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = SOURCE_ROOT; };
 		1F6DDD852770F5EB0054D75D /* SlotsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotsManager.swift; sourceTree = "<group>"; };
 		1F7973AE2786CE3D00AFFE0B /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		1F7DABA127A13CCB003FD740 /* DeleteActionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteActionVC.swift; sourceTree = "<group>"; };
@@ -438,6 +439,9 @@
 		1FD7865027FE0AD300C6861A /* BubbleSticky+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BubbleSticky+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		1FD7865127FE0AD300C6861A /* BubbleSticky+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BubbleSticky+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		1FDA57C427F5820C00B13E48 /* Description File.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Description File.rtf"; sourceTree = "<group>"; };
+		1FDB7A4A2801521300C917F4 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		1FDB7A4C280152C000C917F4 /* BubbleNoteView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BubbleNoteView.xib; sourceTree = "<group>"; };
+		1FDB7A4E280152DF00C917F4 /* BubbleNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleNoteView.swift; sourceTree = SOURCE_ROOT; };
 		1FDDCC252768896E00290CFB /* Rose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rose.png; sourceTree = "<group>"; };
 		1FDDCC282768897300290CFB /* Aqua.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Aqua.png; sourceTree = "<group>"; };
 		1FDDCC2B2768897900290CFB /* Peach.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Peach.png; sourceTree = "<group>"; };
@@ -990,7 +994,9 @@
 		28CBA4AF25F39A2700EDFDE3 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				1F6A1DB028000AE50024D48F /* Note.swift */,
+				1FDB7A4C280152C000C917F4 /* BubbleNoteView.xib */,
+				1FDB7A4E280152DF00C917F4 /* BubbleNoteView.swift */,
+				1FDB7A4A2801521300C917F4 /* Note.swift */,
 				1FD7865027FE0AD300C6861A /* BubbleSticky+CoreDataClass.swift */,
 				1FD7865127FE0AD300C6861A /* BubbleSticky+CoreDataProperties.swift */,
 				1FD7864E27FE0A8A00C6861A /* BubbleStickyViewModel.swift */,
@@ -1252,6 +1258,7 @@
 				280360B225E582B80080010F /* ChronoTimerCell.xib in Resources */,
 				289196D3261E0BD400E987BE /* StickyNote.xib in Resources */,
 				1F42161B2796D88D00A73F32 /* TitleSymbol.xib in Resources */,
+				1FDB7A4D280152C000C917F4 /* BubbleNoteView.xib in Resources */,
 				1FDDCC2C2768897900290CFB /* Peach.png in Resources */,
 				2843319226726C620043F8EC /* PausedSticker.xib in Resources */,
 				287E627C2658089F00B863E1 /* WelcomeView.xib in Resources */,
@@ -1437,7 +1444,7 @@
 				1FD7864F27FE0A8A00C6861A /* BubbleStickyViewModel.swift in Sources */,
 				1F68894E2681C166002EFA68 /* DynamicTimeBubbleSelection.intentdefinition in Sources */,
 				1F145ACF27A3F4420076CCD6 /* Fonts.swift in Sources */,
-				1F6A1DB128000AE50024D48F /* Note.swift in Sources */,
+				1FDB7A4B2801521300C917F4 /* Note.swift in Sources */,
 				280360A025E582790080010F /* Digit.swift in Sources */,
 				2821B76B25E4E3620096508C /* Model.xcdatamodeld in Sources */,
 				1F0AA8AA2684567600732897 /* WidgetDataCoordinator.swift in Sources */,
@@ -1456,6 +1463,7 @@
 				1F3D449A27A1AD3200B101AA /* FlippingBackground.swift in Sources */,
 				1F3D9483278C494700AE5C97 /* DurationCell.swift in Sources */,
 				28512FA6264D5A70005A2CE5 /* TimeDots1.swift in Sources */,
+				1FDB7A4F280152DF00C917F4 /* BubbleNoteView.swift in Sources */,
 				280360A925E582A10080010F /* ColorCircle.swift in Sources */,
 				1F93720B27EDDEA200023440 /* PairStickyVM.swift in Sources */,
 				28512FA8264D5A70005A2CE5 /* TimeDots.swift in Sources */,
