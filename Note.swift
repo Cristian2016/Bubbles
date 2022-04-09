@@ -54,8 +54,7 @@ struct Note_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             Note()
-            Note()
-                .preferredColorScheme(.dark)
+            Note().preferredColorScheme(.dark)
         }
     }
 }
