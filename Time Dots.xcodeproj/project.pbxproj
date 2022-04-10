@@ -87,11 +87,11 @@
 		1F8C9D86278CC29B001EF736 /* HMSHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F8C9D85278CC29B001EF736 /* HMSHeader.xib */; };
 		1F8C9D88278CC384001EF736 /* HMSHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8C9D87278CC384001EF736 /* HMSHeader.swift */; };
 		1F8CA54E27C3C4CE000EC556 /* DurationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F8CA54D27C3C4CE000EC556 /* DurationView.xib */; };
-		1F93720B27EDDEA200023440 /* PairStickyVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F93720A27EDDEA200023440 /* PairStickyVM.swift */; };
+		1F93720B27EDDEA200023440 /* PairStickiesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F93720A27EDDEA200023440 /* PairStickiesVM.swift */; };
 		1F94DE9327847E23000CBBAE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2821B76925E4E3620096508C /* Model.xcdatamodeld */; };
 		1F94DE9427847E3B000CBBAE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2821B76925E4E3620096508C /* Model.xcdatamodeld */; };
 		1F94DE9527847EF4000CBBAE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2821B76925E4E3620096508C /* Model.xcdatamodeld */; };
-		1F96CDBC27E65BC0001B9963 /* PairStickiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F96CDBB27E65BC0001B9963 /* PairStickiesVC.swift */; };
+		1F96CDBC27E65BC0001B9963 /* StickiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F96CDBB27E65BC0001B9963 /* StickiesVC.swift */; };
 		1F96CDBE27E65CE0001B9963 /* PairStickiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F96CDBD27E65CE0001B9963 /* PairStickiesView.swift */; };
 		1F9D2AF826850C1A00F9BCDB /* Placeholders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D2AF626850AB400F9BCDB /* Placeholders.swift */; };
 		1FA08F0B279A98160064D6A0 /* UserHintView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FA08F0A279A98160064D6A0 /* UserHintView.xib */; };
@@ -411,8 +411,8 @@
 		1F8C9D85278CC29B001EF736 /* HMSHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HMSHeader.xib; sourceTree = SOURCE_ROOT; };
 		1F8C9D87278CC384001EF736 /* HMSHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMSHeader.swift; sourceTree = "<group>"; };
 		1F8CA54D27C3C4CE000EC556 /* DurationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DurationView.xib; sourceTree = SOURCE_ROOT; };
-		1F93720A27EDDEA200023440 /* PairStickyVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairStickyVM.swift; sourceTree = SOURCE_ROOT; };
-		1F96CDBB27E65BC0001B9963 /* PairStickiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairStickiesVC.swift; sourceTree = "<group>"; };
+		1F93720A27EDDEA200023440 /* PairStickiesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairStickiesVM.swift; sourceTree = SOURCE_ROOT; };
+		1F96CDBB27E65BC0001B9963 /* StickiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickiesVC.swift; sourceTree = "<group>"; };
 		1F96CDBD27E65CE0001B9963 /* PairStickiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairStickiesView.swift; sourceTree = "<group>"; };
 		1F9D2AF626850AB400F9BCDB /* Placeholders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placeholders.swift; sourceTree = "<group>"; };
 		1FA08F0A279A98160064D6A0 /* UserHintView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserHintView.xib; sourceTree = "<group>"; };
@@ -662,8 +662,8 @@
 			isa = PBXGroup;
 			children = (
 				1F96CDBD27E65CE0001B9963 /* PairStickiesView.swift */,
-				1F96CDBB27E65BC0001B9963 /* PairStickiesVC.swift */,
-				1F93720A27EDDEA200023440 /* PairStickyVM.swift */,
+				1F96CDBB27E65BC0001B9963 /* StickiesVC.swift */,
+				1F93720A27EDDEA200023440 /* PairStickiesVM.swift */,
 			);
 			name = SwiftUI;
 			sourceTree = "<group>";
@@ -1385,7 +1385,7 @@
 				1FFE2E03268DEB37005B172B /* SwiftUIView.swift in Sources */,
 				2803608B25E580390080010F /* Device.swift in Sources */,
 				288F5E092645F63A002E7DB7 /* CalManager.swift in Sources */,
-				1F96CDBC27E65BC0001B9963 /* PairStickiesVC.swift in Sources */,
+				1F96CDBC27E65BC0001B9963 /* StickiesVC.swift in Sources */,
 				1F96CDBE27E65CE0001B9963 /* PairStickiesView.swift in Sources */,
 				28DB9E4925E58C8700CCF8E9 /* UITweaks.swift in Sources */,
 				1F686E25278F50DF0032279B /* TimerDuration+CoreDataProperties.swift in Sources */,
@@ -1465,7 +1465,7 @@
 				28512FA6264D5A70005A2CE5 /* TimeDots1.swift in Sources */,
 				1FDB7A4F280152DF00C917F4 /* BubbleNoteView.swift in Sources */,
 				280360A925E582A10080010F /* ColorCircle.swift in Sources */,
-				1F93720B27EDDEA200023440 /* PairStickyVM.swift in Sources */,
+				1F93720B27EDDEA200023440 /* PairStickiesVM.swift in Sources */,
 				28512FA8264D5A70005A2CE5 /* TimeDots.swift in Sources */,
 				287DCF65265B95CC006F1F99 /* BlinkingCircles.swift in Sources */,
 				1F1D86D12762743F0072B8C3 /* Slide Animation Controllers.swift in Sources */,

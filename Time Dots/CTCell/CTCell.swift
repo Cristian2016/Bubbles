@@ -113,8 +113,8 @@ class CTCell: UITableViewCell {
     }}
     
     @IBOutlet weak var bubbleNote: BubbleNoteView! {didSet{
-        bubbleNote.tap.addTarget(self, action: <#T##Selector#>)
-        bubbleNote.pan.addTarget(self, action: <#T##Selector#>)
+        bubbleNote.tap.addTarget(self, action: #selector(handleStickyNoteTap(_:)))
+        bubbleNote.pan.addTarget(self, action: #selector(handleStickyNotePan(_:)))
     }}
     
     @IBOutlet weak var calendarSticker: UIImageView!
@@ -454,7 +454,7 @@ extension CTCell {
 extension CTCell {
     @objc private func handleStickyNoteTap(_ gesture:UITapGestureRecognizer) {
         if gesture.state == .ended {
-            print(#function)
+            delegate?.userTappedStickyNote(cellIndex: secondsButton.tag)
         }
     }
     

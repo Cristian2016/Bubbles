@@ -16,10 +16,10 @@ struct PairStickiesView: View {
     @Environment(\.presentationMode) var presentation //use it to dismiss
     
     // MARK: -
-    @ObservedObject var viewModel:PairStickyVM
+    @ObservedObject var viewModel:PairStickiesVM
     var dismiss:(()->())? //dismiss VC when user choses a note or touches [+]
     
-    init(_ viewModel:PairStickyVM, closure: (()->())?) {
+    init(_ viewModel:PairStickiesVM, closure: (()->())?) {
         self.viewModel = viewModel
         self.dismiss = closure
         self.userInput = userInput

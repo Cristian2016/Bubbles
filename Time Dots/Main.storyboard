@@ -1866,10 +1866,10 @@
             </objects>
             <point key="canvasLocation" x="2606" y="-563"/>
         </scene>
-        <!--Pair StickiesVC-->
+        <!--StickiesVC-->
         <scene sceneID="QY9-pm-neo">
             <objects>
-                <viewController storyboardIdentifier="StickiesVC" modalPresentationStyle="overFullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sq7-vU-2wn" customClass="PairStickiesVC" customModule="Time_Dots" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StickiesVC" modalPresentationStyle="overFullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sq7-vU-2wn" customClass="StickiesVC" customModule="Time_Dots" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="m8J-QZ-YxO"/>
                         <viewControllerLayoutGuide type="bottom" id="3DJ-t2-X3m"/>

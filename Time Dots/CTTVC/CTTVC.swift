@@ -762,6 +762,16 @@ extension CTTVC {
 }
 
 extension CTTVC:ChronoTimerCellDelegate {
+    func userTappedStickyNote(cellIndex index:Int) {
+        let bubble = frc.object(at: IndexPath(row: index, section: 0))
+        //show BubbleStickiesView
+        showStickiesVC()
+    }
+    
+    func userPannedOnStickyNote(cellIndex index:Int) {
+        
+    }
+    
     func undoLastActionTapped(_ button: UIButton) {
         deleteMostRecentSession(at: IndexPath(row: button.tag, section: 0))
     }
@@ -838,6 +848,13 @@ extension CTTVC:ChronoTimerCellDelegate {
         let ct = frc.object(at: IndexPath(row: cellIndex, section: 0))
         ct.stickyNote = text
         CoreDataStack.shared.saveContext()
+    }
+    
+    private func showStickiesVC() {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        guard let stickiesVC = sb.instantiateViewController(withIdentifier: "StickiesVC") as? StickiesVC else { fatalError() }
+        present(stickiesVC, animated: false)
+        print("StickiesVC presented")
     }
 }
 

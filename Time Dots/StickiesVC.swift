@@ -8,11 +8,11 @@
 import UIKit
 import SwiftUI
 
-extension PairStickiesVC {
+extension StickiesVC {
     typealias HC = UIHostingController
 }
 
-class PairStickiesVC: UIViewController {
+class StickiesVC: UIViewController {
     func setupHostController() {
         //hosting controller
         let hc = HC(rootView: PairStickiesView(.init(pair)) { [weak self] in
@@ -41,7 +41,7 @@ class PairStickiesVC: UIViewController {
     }
 }
 
-extension PairStickiesVC {
+extension StickiesVC {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard
             let location = touches.first?.location(in: view),
